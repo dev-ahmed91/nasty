@@ -97,7 +97,7 @@
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="damam" name="branch" value="Dammam"
                                                            class="custom-control-input" checked>
-                                                    <label class="custom-control-label" for="damamm">
+                                                    <label class="custom-control-label" for="damam">
                                                         فرع الدمام
                                                     </label>
                                                 </div>

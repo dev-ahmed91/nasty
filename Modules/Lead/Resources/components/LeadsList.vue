@@ -41,7 +41,7 @@
                                     <th>Name</th>
                                     <th>Phone</th>
                                     <th>Branch</th>
-                                    <th>Sent</th>
+                                    <th>Status</th>
                                     <th>Created</th>
                                     <th></th>
                                 </tr>
@@ -52,7 +52,9 @@
                                     <td>{{ lead.name }}</td>
                                     <td>{{ lead.phone}}</td>
                                     <td>{{ lead.branch}}</td>
-                                    <td>{{ lead.sent ? 'Sent' : 'Pending'}}</td>
+                                    <td>
+                                        <span v-bind:class="{ 'badge-success' : (lead.sent === 1) , 'badge-light' : (lead.sent === 0) }" class="badge">{{ lead.sentLabel }}</span>
+                                    </td>
                                     <td>{{ moment(lead.created_at).format('DD MMM YYYY, hh:mm A') }}</td>
                                     <td>
                                         <div class="dropdown">

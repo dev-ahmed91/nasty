@@ -2563,6 +2563,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'leads-list',
   data: function data() {
@@ -62066,7 +62068,17 @@ var render = function() {
                         _c("td", [_vm._v(_vm._s(lead.branch))]),
                         _vm._v(" "),
                         _c("td", [
-                          _vm._v(_vm._s(lead.sent ? "Sent" : "Pending"))
+                          _c(
+                            "span",
+                            {
+                              staticClass: "badge",
+                              class: {
+                                "badge-success": lead.sent === 1,
+                                "badge-light": lead.sent === 0
+                              }
+                            },
+                            [_vm._v(_vm._s(lead.sentLabel))]
+                          )
                         ]),
                         _vm._v(" "),
                         _c("td", [
@@ -62219,7 +62231,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Branch")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Sent")]),
+        _c("th", [_vm._v("Status")]),
         _vm._v(" "),
         _c("th", [_vm._v("Created")]),
         _vm._v(" "),

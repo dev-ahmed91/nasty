@@ -414,5 +414,5 @@
 
 @section('scripts')
     @parent
-    <script src="/assets/js/dashboard.js"></script>
+<!--    <script src="/assets/js/dashboard.js"></script>-->
 @endsection

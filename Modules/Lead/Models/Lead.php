@@ -16,4 +16,19 @@ class Lead extends Eloquent
     protected $fillable = [
         'name', 'phone', 'branch'
     ];
+
+    /**
+     * The attributes that are appended.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'sentLabel'
+    ];
+
+    public function getSentLabelAttribute()
+    {
+        return $this->sent ? 'Sent' : 'Pending';
+    }
+
 }
