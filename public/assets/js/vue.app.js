@@ -2411,6 +2411,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'doctors-list',
   data: function data() {
@@ -61648,6 +61656,22 @@ var render = function() {
               ])
             ]
           )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-1 col-sm-3 mb-1" }, [
+          _c("div", { staticClass: "input-group  d-xl-inline-flex" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-success",
+                attrs: {
+                  href: _vm.route("admin.doctors.create", { page: _vm.page }),
+                  title: "New"
+                }
+              },
+              [_c("i", { staticClass: "la la-plus" })]
+            )
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-md-2 col-sm-6 mb-1 ml-auto" }, [

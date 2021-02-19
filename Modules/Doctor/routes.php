@@ -10,5 +10,5 @@ Route::prefix('/api')->middleware('auth:web')->attribute('namespace', $namespace
 
 
 Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', $namespace.'Admin')->as('admin.')->group( function () {
-    Route::resource('doctors', 'DoctorController')->only('index', 'edit', 'update');
+    Route::resource('doctors', 'DoctorController')->only('index', 'edit', 'update', 'create', 'store');
 });

@@ -13,6 +13,12 @@
                     </div>
                 </div>
 
+                <div class="col-md-1 col-sm-3 mb-1">
+                    <div class="input-group  d-xl-inline-flex">
+                        <a class="btn btn-success" :href="route('admin.doctors.create', {page: page})" title="New"><i class="la la-plus"></i></a>
+                    </div>
+                </div>
+
                 <div class="col-md-2 col-sm-6 mb-1 ml-auto">
                     <div class="input-group search-area d-xl-inline-flex">
                         <div class="dropdown " style="width: 100%">
@@ -68,8 +74,10 @@
                         <pagination :limit="8" :data="doctors" :show-disabled="true" @pagination-change-page="fetchDoctors">
                             <span slot="prev-nav">&lt;</span>
                             <span slot="next-nav">&gt;</span>
-
                         </pagination>
+
+
+
                     </div>
                 </div>
             </div>
