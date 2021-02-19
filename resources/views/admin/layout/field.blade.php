@@ -1,4 +1,4 @@
-@if(in_array($type, ['text', 'file']))
+@if(in_array($type, ['text']))
     <div class="form-group col-md-{{$cols}} bmd-form-group  @error($name) has-danger @enderror">
         <label for="{{ $name }}"> {{ $label }} @error($name) ({{ $message }}) @enderror</label>
         @php ($default = $form ? $form->$name : '' )
@@ -6,9 +6,17 @@
     </div>
 @endif
 
+@if(in_array($type, ['file']))
+    <div class="form-group col-md-{{$cols}} custom-file bmd-form-group  @error($name) has-danger @enderror">
+        <label for="{{ $name }}" class="custom-file-label"> {{ $label }} @error($name) ({{ $message }}) @enderror</label>
+        @php ($default = $form ? $form->$name : '' )
+        <input name="{{ $name }}" id="{{ $name }}" type="{{ $type }}" value="{{ old($name, $default) }}" class="form-control custom-file-input" >
+    </div>
+@endif
+
 @if(in_array($type, ['disabled']))
-    <div class="form-group col-md-{{$cols}} bmd-form-group  @error($name) has-danger @enderror">
-        <label for="{{ $name }}"> {{ $label }} @error($name) ({{ $message }}) @enderror</label>
+    <div class="form-group col-md-{{$cols}}  bmd-form-group  @error($name) has-danger @enderror">
+        <label for="{{ $name }}" > {{ $label }} @error($name) ({{ $message }}) @enderror</label>
         @php ($default = $form ? $form->$name : '' )
         <input name="{{ $name }}" id="{{ $name }}" type="text" disabled value="{{ old($name, $default) }}" class="form-control">
     </div>

@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Faker\Generator as FakerGenerator;
+use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 
 class AppServiceProvider extends ServiceProvider
 {

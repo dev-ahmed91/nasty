@@ -2,8 +2,8 @@
 
 @section('content')
         <!-- row -->
-    <div class="container-fluid">
-        <!-- Add Order -->
+<!--    <div class="container-fluid">
+        &lt;!&ndash; Add Order &ndash;&gt;
         <div class="modal fade" id="addOrderModalside">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -409,7 +409,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 @endsection
 
 @section('scripts')

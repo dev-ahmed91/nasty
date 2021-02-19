@@ -33,11 +33,22 @@ if (! function_exists('field')) {
 }
 
 
+
 if (! function_exists('registeredModules')) {
     function registeredModules() {
         return [
             'Country',
             'Setting',
+            'Page',
+            'Doctor',
+            'Lead',
         ];
+    }
+}
+
+if (! function_exists('settings')) {
+    function settings()
+    {
+        return new \Modules\Setting\Services\SettingService();
     }
 }

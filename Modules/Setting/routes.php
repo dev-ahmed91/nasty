@@ -12,3 +12,4 @@ Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', $namespa
 Route::prefix('/api')->middleware('auth:web')->attribute('namespace', $namespace.'Api')->group( function () {
     Route::get('/settings', 'SettingController@index')->name('api.settings.index');
 });
+

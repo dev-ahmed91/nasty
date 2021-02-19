@@ -8,12 +8,19 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('admin.users.index') }}" >
-                    <i class="la la-users"></i>
-                    <span class="nav-text">Users</span>
+                <a href="{{ route('admin.leads.index') }}" >
+                    <i class="las la-users"></i>
+                    <span class="nav-text">Leads</span>
                 </a>
             </li>
 
+            <li>
+                <a href="{{ route('admin.doctors.index') }}" >
+                    <i class="las la-stethoscope"></i>
+                    <span class="nav-text">Doctors</span>
+                </a>
+            </li>
+        <!--
             <li>
                 <a href="{{ route('admin.pages.index') }}" >
                     <i class="la la-sticky-note"></i>
@@ -22,7 +29,7 @@
             </li>
 
 
-<!--            <li>
+            <li>
                 <a href="{{ route('admin.transactions.index') }}" >
                     <i class="la la-exchange-alt"></i>
                     <span class="nav-text">Transactions</span>
@@ -61,6 +68,14 @@
                     <span class="nav-text">Settings</span>
                 </a>
             </li>
+
+<!--            <li>
+                <a href="{{ route('admin.users.index') }}" >
+                    <i class="la la-users"></i>
+                    <span class="nav-text">Admins</span>
+                </a>
+            </li>-->
+
 
         </ul>
 

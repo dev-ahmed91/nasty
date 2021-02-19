@@ -1,0 +1,133 @@
+.btn {
+  padding: 12px 32px;
+  border-radius: 64px;
+  font-weight: 500;
+  border: 0;
+  @media screen and (max-width: $max-xs) {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 0.1rem $color-yellow;
+  }
+  &.btn-dark {
+    background-color: $color-dark;
+    color: #fff;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $color-yellow;
+      color: $color-dark;
+    }
+  }
+  &.btn-yellow {
+    background-color: $color-yellow;
+    color: $color-dark;
+    font-weight: bold;
+    &:hover,
+    &:focus,
+    &:active {
+      background: $color-dark;
+      color: $color-yellow;
+    }
+  }
+}
+::placeholder,
+select,
+option {
+  color: $color-yellow !important;
+  font-weight: 300 !important;
+  font-family: $font-ar !important;
+}
+
+.form-control {
+  min-height: 48px;
+  padding: 0 16px;
+  background-color: $color-dark;
+  color: $color-yellow;
+  border: 0;
+  border-radius: 64px;
+  font-family: $font-en;
+  font-weight: 400;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $color-dark;
+    color: $color-yellow;
+    box-shadow: 0 0 0 0.1rem $color-dark;
+  }
+}
+
+.custom-control-inline {
+  margin-left: 20%;
+  margin-right: 0;
+}
+
+.custom-control-inline:nth-child(2) {
+  margin-left: 0;
+}
+
+.custom-control-input {
+  right: 0;
+  left: auto;
+}
+
+.custom-control-label::before,
+.custom-control-label::after {
+  right: -24px;
+  left: auto;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+}
+
+.custom-control-label {
+  padding: 4px 0;
+  color: #fff;
+  padding-right: 4px;
+  font-size: 15px;
+}
+
+.custom-control-label::before {
+  border: 2px solid $color-yellow;
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after {
+  background-image: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: $color-yellow;
+  right: -19px;
+  top: 9px;
+  @media screen and (max-width: $max-md) {
+    top: 8px;
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  border-color: $color-yellow;
+  background-color: $color-dark;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba($color-dark, $alpha: 0.4);
+}
+
+.custom-control {
+  padding-right: 1.5rem;
+  padding-left: 0;
+}
+
+input[type="text"] {
+  font-family: $font-ar;
+}
+
+.custom-select {
+  position: relative;
+  background: $color-dark url("../images/down.svg") left 22px center/8px 10px no-repeat;
+}

@@ -37,7 +37,9 @@ axios.interceptors.response.use(response => {
 Vue.use(exports);
 
 Vue.component('users-list', require('./components/UsersList.vue').default);
-Vue.component('settings-list', require('../../modules/Setting/Resources/componenets/SettingsList.vue').default);
+Vue.component('settings-list', require('../../modules/Setting/Resources/components/SettingsList.vue').default);
+Vue.component('doctors-list', require('../../modules/Doctor/Resources/components/DoctorsList.vue').default);
+Vue.component('leads-list', require('../../modules/Lead/Resources/components/LeadsList.vue').default);
 Vue.component('countries-list', require('../../modules/Country/Resources/components/CountriesList.vue').default);
 Vue.component('pagination', require('laravel-vue-pagination'));
 

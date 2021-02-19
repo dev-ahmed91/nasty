@@ -1,0 +1,217 @@
+// Main style
+.wrapper {
+    background: transparent linear-gradient(30deg, #02343e 0%, #289ab1 100%) center center no-repeat padding-box;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+
+    .gradient {
+        background: url("../images/texture.jpg") no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: multiply;
+    }
+
+    .main-header {
+        padding: 40px 0;
+        &__logo {
+            img {
+                height: 80px;
+                @media screen and (max-width: $max-md) {
+                    height: 40px;
+                }
+            }
+        }
+        &__button {
+            padding: 16px 0;
+            @media screen and (max-width: $max-md) {
+                padding: 0;
+            }
+        }
+    }
+
+    .hero {
+        margin: 32px 0;
+        &__photo {
+            background-color: $color-dark;
+            padding: 8px;
+            span {
+                position: absolute;
+                right: 16px;
+                bottom: 16px;
+                background: rgb(2 52 62 / 71%);
+                color: #fff;
+                padding: 8px 12px;
+            }
+            .owl-carousel .owl-item img {
+                height: 460px !important;
+                object-fit: cover;
+                @media screen and (max-width: $max-md) {
+                    height: 260px !important;
+                }
+            }
+        }
+        &__book {
+            padding: 32px 0;
+            @media screen and (max-width: $max-md) {
+                text-align: center !important;
+            }
+            @media (min-width: $min-lg) and (max-width: $max-lg) {
+                padding: 0;
+            }
+            span {
+                font-size: 28px;
+            }
+            h1 {
+                margin: 16px 0;
+                display: block;
+            }
+        }
+    }
+
+    .experts {
+        h2 {
+            span {
+                font-family: $font-en !important;
+            }
+        }
+        h4 {
+            margin: 32px 0 24px 0;
+            @media (min-width: $min-md) and (max-width: $max-lg) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.doctors {
+    &__title {
+        img {
+            max-width: 70% !important;
+        }
+    }
+    &__slider {
+        position: relative;
+    }
+}
+
+.testimonials {
+    background-color: $color-yellow;
+    &__title {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @media screen and (max-width: $max-md) {
+            display: block;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        h2 {
+            color: $color-dark;
+        }
+    }
+    .slide {
+        img {
+            width: 90%;
+            margin: auto;
+            @media screen and (max-width: $max-md) {
+                width: 100%;
+            }
+        }
+    }
+    .owl-item {
+        padding: 0.5%;
+        @media screen and (max-width: $max-md) {
+            padding: 0;
+        }
+    }
+}
+
+.footer {
+    padding-top: 96px;
+    padding-bottom: 56px;
+    h2 {
+        margin-bottom: 24px;
+    }
+    .copyrights {
+        padding-top: 80px;
+        p {
+            font-size: 16px;
+            line-height: 2rem;
+        }
+    }
+}
+
+.location {
+    margin-left: 24px;
+    margin-bottom: 32px;
+    .icon {
+        height: 24px;
+        margin-left: 4px;
+    }
+}
+
+.phone {
+    background-color: $color-dark;
+    padding: 4px 80px;
+    color: #fff;
+    font-size: 40px;
+    border-radius: 56px;
+    font-family: $font-en;
+    a {
+        color: #fff;
+    }
+    @media screen and (max-width: $max-md) {
+        margin-bottom: 64px;
+        display: block !important;
+    }
+}
+
+.offset-lg-3 {
+    @media screen and (max-width: $max-md) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.offer__text--slider {
+    padding: 6rem 2.5rem;
+    background-color: $color-dark;
+    margin-left: -30px;
+    width: 110%;
+    text-align: center;
+    @media screen and (max-width: $max-md) {
+        width: 100%;
+    }
+    &:hover {
+        .btn {
+            &:hover {
+                background-color: #fff;
+                color: $color-dark;
+            }
+        }
+    }
+}
+
+.offers-slider {
+    .offer__photo {
+        border: 8px solid $color-dark;
+    }
+    
+}
+
+.offers-video {
+    iframe {
+        height: 600px;
+        @media screen and (max-width: $max-md) {
+            height: 400px;
+        }
+    }
+}

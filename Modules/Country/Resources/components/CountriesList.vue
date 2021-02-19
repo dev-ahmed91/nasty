@@ -78,7 +78,7 @@
 
 <script>
 export default {
-    name: 'countriesList',
+    name: 'countries-list',
     data: function () {
         return {
             'q' : '',
@@ -115,7 +115,6 @@ export default {
             };
         },
         changeSort(sort) {
-            console.log(sort);
             this.sort = (sort !== undefined) ? this.sort = sort : '';
             this.fetchCountries();
         },

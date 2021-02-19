@@ -1,0 +1,234 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    direction: rtl;
+    text-align: right;
+    @supports (-webkit-overflow-scrolling: touch) {
+        width: 100%;
+        max-width: 100%;
+        will-change: position;
+    }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .color {
+        color: $color-yellow;
+    }
+}
+
+.d-pad {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @media screen and (max-width: $max-md) {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+}
+
+.en {
+    font-family: $font-en !important;
+    direction: ltr;
+}
+
+.underline-big,
+.underline-small {
+    margin-bottom: 32px;
+}
+
+.underline-small {
+    max-width: 90%;
+    @media screen and (max-width: $max-md) {
+        max-width: 50% !important;
+    }
+}
+
+.service {
+    position: relative;
+    background-color: $color-yellow;
+    margin-bottom: 24px;
+    &__img {
+        height: 130px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $color-dark;
+            mix-blend-mode: color;
+            transition: all 0.5s ease-in-out;
+            z-index: 99;
+        }
+        img {
+            position: relative;
+            object-fit: cover;
+            height: 100%;
+            width: 106%;
+            margin-right: -3px;
+        }
+    }
+    &__title {
+        padding: 12px 8px 0px;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        height: 50px;
+        h6 {
+            color: $color-dark;
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+    &:hover .service__img::after {
+        opacity: 0.1;
+    }
+}
+
+.dr {
+    &__photo {
+        height: 400px;
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &__text {
+        h6 {
+            font-weight: 300;
+            font-size: 20px;
+            margin-top: 16px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: 500;
+            min-height: 40px;
+            margin: 0;
+        }
+        .color {
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.owl-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 180px;
+}
+
+.owl-prev {
+    right: -50px;
+    @media screen and (max-width: $max-md) {
+        right: 16px;
+    }
+    @media (min-width: $min-lg) and (max-width: $max-lg) {
+        right: -16px;
+    }
+}
+
+.owl-next {
+    left: -50px;
+    @media screen and (max-width: $max-md) {
+        left: 16px;
+    }
+    @media (min-width: $min-lg) and (max-width: $max-lg) {
+        left: -16px;
+    }
+}
+
+.offset-lg-3 {
+    margin-right: 25%;
+    margin-left: 0;
+}
+@media (min-width: 992px) {
+    .offset-lg-4 {
+        margin-right: 33.333333%;
+    }
+}
+
+.offer {
+    margin-bottom: 30px;
+    transition: all 0.5s;
+    &:hover &__text {
+        background-color: $color-dark;
+        .btn {
+            color: $color-dark;
+            &:hover {
+                background-color: #fff;
+                color: $color-dark;
+            }
+        }
+    }
+    &__photo {
+        img {
+            width: 100%;
+            height: 100%;
+            min-height: 200px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+    &__text {
+        transition: all 0.5s;
+        padding: 16px;
+        background-color: #0b4754;
+        .d-block {
+            font-size: 24px;
+            margin-top: 8px;
+        }
+    }
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    iframe {
+        width: 100%;
+        min-height: 300px;
+        border: 0;
+        display: flex;
+        align-items: center;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 30px;
+        width: 42px;
+    }
+    &::before {
+        background: url("../images/bottom-left.png") no-repeat center center;
+        bottom: -10px;
+        left: -20px;
+        @media screen and (max-width: $max-md) {
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &::after {
+        background: url("../images/top-right.png") no-repeat center center;
+        top: -16px;
+        right: -18px;
+        @media screen and (max-width: $max-md) {
+            top: 0;
+            right: 0;
+        }
+    }
+}

@@ -4,10 +4,10 @@
             <div class="row">
                 <div class="col-sm-6 col-md-3 mb-1">
                     <div class="input-group  search-area d-xl-inline-flex  mr-1" >
-                        <input type="text" v-on:keyup.enter="fetchSettings()" class="form-control" placeholder="Search here..." v-model="q">
+                        <input type="text" v-on:keyup.enter="fetchDoctors()" class="form-control" placeholder="Search here..." v-model="q">
                         <div class="input-group-append">
                             <span class="input-group-text">
-                                <a href="javascript:void(0)" v-on:click="fetchSettings()"><i class="flaticon-381-search-2"></i></a>
+                                <a href="javascript:void(0)" v-on:click="fetchDoctors()"><i class="flaticon-381-search-2"></i></a>
                             </span>
                         </div>
                     </div>
@@ -15,7 +15,7 @@
 
                 <div class="col-md-2 col-sm-6 mb-1 ml-auto">
                     <div class="input-group search-area d-xl-inline-flex">
-                                <div class="dropdown " style="width: 100%">
+                        <div class="dropdown " style="width: 100%">
                             <a href="javascript:void(0)" :class="'btn-'+sort.class" class="btn btn-rounded " style="width: 100%" data-toggle="dropdown" aria-expanded="false">
                                 <i class="las la-sort-amount-down-alt scale5"></i>
 
@@ -23,7 +23,7 @@
                                 <i class="las la-angle-down "></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-center">
-                                <a v-for="settingSort in sorts" v-on:click="changeSort(settingSort)" class="dropdown-item" href="javascript:void(0);"><span :class="'text-'+settingSort.class">{{ settingSort.label }}</span></a>
+                                <a v-for="doctorSort in sorts" v-on:click="changeSort(doctorSort)" class="dropdown-item" href="javascript:void(0);"><span :class="'text-'+doctorSort.class">{{ doctorSort.label }}</span></a>
                             </div>
                         </div>
                     </div>
@@ -39,26 +39,25 @@
                                 <tr>
                                     <th class="width10">#</th>
                                     <th>Name</th>
-                                    <th>key</th>
-                                    <th>Value</th>
-                                    <th>Creation Date</th>
+                                    <th>Branch</th>
+                                    <th>Description</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="setting in settings.data">
-                                    <td><strong>{{ setting.id }}</strong></td>
-                                    <td>{{ setting.name }}</td>
-                                    <td>{{ setting.key}}</td>
-                                    <td>{{ setting.value}}</td>
-                                    <td>{{ moment(setting.created_at).format('DD MMM YYYY, hh:mm A') }}</td>
+                                <tr v-for="doctor in doctors.data">
+                                    <td><strong>{{ doctor.id }}</strong></td>
+                                    <td>{{ doctor.name }}</td>
+                                    <td>{{ doctor.branch}}</td>
+                                    <td>{{ doctor.description}}</td>
+                                    <td>{{ moment(doctor.created_at).format('DD MMM YYYY, hh:mm A') }}</td>
                                     <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
                                                 <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
                                             </button>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" :href="route('admin.settings.edit', {setting: setting.id, page: page})">Edit</a>
+                                                <a class="dropdown-item" :href="route('admin.doctors.edit', {doctor: doctor.id, page: page})">Edit</a>
                                             </div>
                                         </div>
                                     </td>
@@ -66,7 +65,7 @@
 
                             </tbody>
                         </table>
-                        <pagination :limit="8" :data="settings" :show-disabled="true" @pagination-change-page="fetchSettings">
+                        <pagination :limit="8" :data="doctors" :show-disabled="true" @pagination-change-page="fetchDoctors">
                             <span slot="prev-nav">&lt;</span>
                             <span slot="next-nav">&gt;</span>
 
@@ -80,34 +79,34 @@
 
 <script>
 export default {
-    name: 'settingsList',
+    name: 'doctors-list',
     data: function () {
         return {
             'q' : '',
             'sort': { 'id' : 'created_at', 'direction': 'DESC', 'label' : 'Sort', 'class' : ''},
-            'settings' : {},
+            'doctors' : {},
             'page' : 1,
             'sorts' : []
         }
     },
     created() {
-        this.fetchSettings();
+        this.fetchDoctors();
         this.fetchSorts();
     },
     computed: {
     },
     methods: {
-        fetchSettings(page = 1) {
+        fetchDoctors(page = 1) {
             this.page = page;
             axios
-                .get(route('api.settings.index', {
+                .get(route('api.doctors.index', {
                     page: page,
                     q : this.q,
                     sort : this.sort.id,
                     direction : this.sort.direction,
                 }))
                 .then(response => {
-                    this.settings = response.data;
+                    this.doctors = response.data;
                 });
         },
         fetchSorts() {
@@ -118,7 +117,7 @@ export default {
         },
         changeSort(sort) {
             this.sort = (sort !== undefined) ? this.sort = sort : '';
-            this.fetchSettings();
+            this.fetchDoctors();
         },
     }
 }

@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(['middleware' => ['auth:web']], function () {
-    Route::get('/', function () { return view('admin.dashboard.index'); })->name('admin.dashboard.index');
     Route::get('/pending/users', function () { return view('admin.dashboard.index'); })->name('admin.pending.users');
     Route::get('/pending/tickets', function () { return view('admin.dashboard.index'); })->name('admin.pending.tickets');
     Route::get('/transactions', function () { return view('admin.dashboard.index'); })->name('admin.transactions.index');
@@ -25,6 +24,7 @@ Route::group(['middleware' => ['auth:web']], function () {
 });
 
 Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', 'Admin')->as('admin.')->group( function () {
+    Route::get('/', function () { return view('admin.dashboard.index'); })->name('dashboard.index');
     Route::resource('users', 'UserController')->only('index', 'edit', 'update');
 });
 

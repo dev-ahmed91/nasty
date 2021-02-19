@@ -1,0 +1,105 @@
+// EN FONTS
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
+// AR FONTS
+@font-face {
+  font-family: "GE SS Two";
+  src: url("../webfonts/gess-two/GESSTwoLight-Light.eot");
+  src: url("../webfonts/gess-two/GESSTwoLight-Light.eot?#iefix") format("embedded-opentype"),
+    url("../webfonts/gess-two/GESSTwoLight-Light.woff2") format("woff2"),
+    url("../webfonts/gess-two/GESSTwoLight-Light.woff") format("woff"),
+    url("../webfonts/gess-two/GESSTwoLight-Light.ttf") format("truetype"),
+    url("../webfonts/gess-two/GESSTwoLight-Light.svg#GESSTwoLight-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GE SS Two";
+  src: url("../webfonts/gess-two/GESSTwoMedium-Medium.eot");
+  src: url("../webfonts/gess-two/GESSTwoMedium-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../webfonts/gess-two/GESSTwoMedium-Medium.woff2") format("woff2"),
+    url("../webfonts/gess-two/GESSTwoMedium-Medium.woff") format("woff"),
+    url("../webfonts/gess-two/GESSTwoMedium-Medium.ttf") format("truetype"),
+    url("../webfonts/gess-two/GESSTwoMedium-Medium.svg#GESSTwoMedium-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GE SS Two";
+  src: url("../webfonts/gess-two/GESSTwoBold-Bold.eot");
+  src: url("../webfonts/gess-two/GESSTwoBold-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../webfonts/gess-two/GESSTwoBold-Bold.woff2") format("woff2"),
+    url("../webfonts/gess-two/GESSTwoBold-Bold.woff") format("woff"),
+    url("../webfonts/gess-two/GESSTwoBold-Bold.ttf") format("truetype"),
+    url("../webfonts/gess-two/GESSTwoBold-Bold.svg#GESSTwoBold-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 16px;
+  @media screen and (max-width: $max-md) {
+    font-size: 15px;
+  }
+  body {
+    font-family: $font-ar;
+    p {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      font-family: $font-ar;
+      font-weight: 500;
+      line-height: 1.3;
+      color: #fff;
+    }
+    h1,
+    .h1 {
+      font-size: 3rem;
+      @media screen and (max-width: $max-md) {
+      }
+    }
+    h2,
+    .h2 {
+      font-size: 3rem;
+      @media screen and (max-width: $max-md) {
+      }
+    }
+    h3,
+    .h3 {
+      font-size: 2.5rem;
+      @media screen and (max-width: $max-md) {
+      }
+    }
+    h4,
+    .h4 {
+      font-size: 1.5rem;
+      @media screen and (max-width: $max-md) {
+      }
+      h5,
+      .h5 {
+        font-size: 1.3rem;
+      }
+      h6,
+      .h6 {
+        font-size: 1rem;
+      }
+    }
+  }
+}
