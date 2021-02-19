@@ -17,13 +17,7 @@ class SettingSeeder extends Seeder
             'key' => 'common.title',
             'value' => 'الكحال | خبراء طب العيون علي مدار 35 عاماً'
         ]);
-
-        Setting::create([
-            'name' => 'Titlee',
-            'key' => 'common.titlee',
-            'value' => 'ً'
-        ]);
-
+        
         Setting::create([
             'name' => 'Services Section Description',
             'key' => 'services.description',

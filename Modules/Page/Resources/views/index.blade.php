@@ -39,7 +39,7 @@
                         <!-- button -->
                         <div class="col-6">
                             <div class="main-header__button text-left">
-                                <a href="#services" class="btn btn-dark">أحدث العروض</a>
+                                <a href="#offers" class="btn btn-dark">أحدث العروض</a>
                             </div>
                         </div>
                         <!-- button -->
