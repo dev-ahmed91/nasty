@@ -4,6 +4,7 @@ namespace Modules\Lead\Models;
 
 
 use Eloquent;
+use Mail;
 
 class Lead extends Eloquent
 {
@@ -31,4 +32,17 @@ class Lead extends Eloquent
         return $this->sent ? 'Sent' : 'Pending';
     }
 
+    public function send()
+    {
+        $lead = $this;
+        $subject = settings()->get('leads.mails.subject');
+
+        foreach (explode(',', settings()->get('leads.mails.to')) as $email) {
+            Mail::send("Lead.Resources.views.mail", compact("lead", "subject"), function ($message) use ($email, $subject){
+                $message->from('tech@jumppeak.net', 'Jumppeak');
+                $message->to($email);
+                $message->subject($subject);
+            });
+        }
+    }
 }

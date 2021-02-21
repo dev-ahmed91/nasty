@@ -66,5 +66,17 @@ class SettingSeeder extends Seeder
             'key' => 'offers.images',
             'value' => '/web/assets/images/offers/01.jpg,/web/assets/images/offers/02.jpg'
         ]);
+
+        Setting::create([
+            'name' => 'Emails list that the leads will be sent to',
+            'key' => 'leads.mails.to',
+            'value' => 'alkahhalmedicalcomplex@gmail.com,tech@jumppeak.net'
+        ]);
+
+        Setting::create([
+            'name' => 'Email subject when leads are sent in the email',
+            'key' => 'leads.mails.subject',
+            'value' => 'عميل جديد يريد الإستعلام عن عروض الكحال'
+        ]);
     }
 }
