@@ -47,7 +47,7 @@
                 'https://sc-static.net/scevent.min.js');
 
             snaptr('init', '6650f7cb-4eb8-4136-b9e0-d08672e8bf55', {
-                'user_email': '__INSERT_USER_EMAIL__'
+                'user_email': 'tech@jumppeak.net'
             });
 
             snaptr('track', 'PAGE_VIEW');
@@ -645,10 +645,21 @@
                         url: form.attr('action'),
                         data: form.serialize(),
                         success: function (data) {
-                                
+
                             $('#form-container').html($('#thankyou').html());
                             gtag('event', 'conversion', {
                                 'send_to': 'AW-604548133/54R_CPDT_PYBEKXYoqAC'
+                            });
+
+                            snaptr('track','PURCHASE');
+
+
+                            twq('track','Purchase', {
+                                //required parameters
+                                'value': '4599',
+                                'currency': 'SAR',
+                                'num_items': '1',
+                                'transaction_id' : '1'
                             });
                         },
 
