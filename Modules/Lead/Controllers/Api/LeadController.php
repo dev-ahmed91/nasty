@@ -25,16 +25,14 @@ class LeadController extends Controller
 
     public function store(Request $request)
     {
-        $criteria = [
-            'name' => 'required',
-            'phone' => 'required',
-            'branch' => 'required',
-        ];
-
-        $request->validate($criteria);
-
         $lead = new Lead();
-        $lead->fill($request->request->all());
+
+        $lead->fill([
+            'branch' => $request->get('LEADCF1'),
+            'name' => $request->get('Last_Name'),
+            'phone' => $request->get('Mobile')
+        ]);
+
         $lead->save();
 
         return response()->json($lead);

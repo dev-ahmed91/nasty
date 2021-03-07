@@ -147,35 +147,47 @@
                                 <h1>لسلامة عينيك</h1>
                                 <!-- booking form -->
                                 <div class="hero__book-form" >
-                                    <form method="post" action="{{ route('api.leads.store') }}" id="form">
+                                    <form method="post" action="{{ route('api.leads.store') }}" name="WebToLeads4751497000000674015" id="form">
                                         @csrf
+                                        <input type='text' style='display:none;' name='xnQsjsdp' value='c720c5569cda887877359d372931a38fb36ebee579e51daa2f0dfadb3d5d4062'>
+                                        <input type='hidden' name='zc_gad' id='zc_gad' value=''>
+                                        <input type='text' style='display:none;' name='xmIwtLD' value='2942070acf7db5bf78c8810eb6e4f06aee879381530aa80d7b8304ab6e23e793'>
+                                        <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='>
+                                        <input type='text' style='display:none;' name='returnURL' value='https://alkahhal.com.sa/' >
+                                        <!-- Do not remove this code. -->
+                                        <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'>
+                                        <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
+                                        <input type='text' style='display:none;' id='Lead_Source' name='Lead Source' value="Advertisement">
+                                        <input type='text' style='display:none;' id='Email' name='Email' value="user@jumppeak.net">
+
                                         <div class="form-row">
                                             <div class="form-group col-lg-12">
-                                                <input type="text" class="form-control"  required name="name" id="fName"
+                                                <input type="text" class="form-control"  required name="Last_Name" id="Last_Name"
                                                        placeholder="الإسم بالكامل" autocomplete="off">
                                             </div>
                                             <div class="form-group col-lg-12">
-                                                <input type="tel" class="form-control" required name="phone" id="pNumber" placeholder="رقم الجوال"
+                                                <input type="tel" class="form-control" required name="Mobile" id="Mobile" placeholder="رقم الجوال"
                                                        autocomplete="off">
                                             </div>
                                             <div class="form-group col-lg-12">
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="damam" name="branch" value="Dammam"
+                                                    <input type="radio" id="damam" name="LEADCF1" value="Dammam"
                                                            class="custom-control-input" checked>
                                                     <label class="custom-control-label" for="damam">
                                                         فرع الدمام
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="ahsaa" name="branch" value="Ehsaa"
+                                                    <input type="radio" id="ahsaa" name="LEADCF1" value="Ehsaa"
                                                            class="custom-control-input">
                                                     <label class="custom-control-label" for="ahsaa">
                                                         فرع الإحساء
                                                     </label>
                                                 </div>
                                             </div>
+
                                             <div class="form-group col-lg-12">
-                                                <button type="submit" class="btn btn-yellow">احجز الآن</button>
+                                                <button type="submit" id="formsubmit" class="btn btn-yellow">احجز الآن</button>
                                             </div>
                                         </div>
                                     </form>
@@ -636,6 +648,10 @@
         <!-- JS -->
         <script src="/web/assets/js/app.min.js"></script>
 
+        @routes
+
+        <script type='text/javascript' id='VisitorTracking'>var $zoho= $zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:'93a57e7c7c3e4572e13c4bab81a6848fa85f004af8f57c30e2a2441301928b3f', values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement('script');s.type='text/javascript';s.id='zsiqscript';s.defer=true;s.src='https://salesiq.zoho.com/widget';t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);function trackVisitor(){try{if($zoho){var LDTuvidObj = document.forms['WebToLeads4751497000000674015']['LDTuvid'];if(LDTuvidObj){LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();}var firstnameObj = document.forms['WebToLeads4751497000000674015']['First Name'];if(firstnameObj){name = firstnameObj.value +' '+name;}$zoho.salesiq.visitor.name(name);var emailObj = document.forms['WebToLeads4751497000000674015']['Email'];if(emailObj){email = emailObj.value;$zoho.salesiq.visitor.email(email);}}} catch(e){}}</script>
+        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=2942070acf7db5bf78c8810eb6e4f06aee879381530aa80d7b8304ab6e23e793gidc720c5569cda887877359d372931a38fb36ebee579e51daa2f0dfadb3d5d4062gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'></script>
         <script type="text/javascript">
             var form = $('#form');
             $('#form').submit(function(e) {
@@ -661,6 +677,35 @@
                                 'num_items': '1',
                                 'transaction_id' : '1'
                             });
+
+                            $.ajax({
+                                type: form.attr('method'),
+                                url: 'https://crm.zoho.com/crm/WebToLeadForm',
+                                data: form.serialize(),
+                                success: function (data) {
+
+                                    $('#form-container').html($('#thankyou').html());
+                                    gtag('event', 'conversion', {
+                                        'send_to': 'AW-604548133/54R_CPDT_PYBEKXYoqAC'
+                                    });
+
+                                    snaptr('track','PURCHASE');
+
+
+                                    twq('track','Purchase', {
+                                        //required parameters
+                                        'value': '4599',
+                                        'currency': 'SAR',
+                                        'num_items': '1',
+                                        'transaction_id' : '1'
+                                    });
+                                },
+
+                                error: function (data) {
+                                    $('#form-container').html($('#thankyou').html());
+                                },
+                            });
+
                         },
 
                         error: function (data) {
