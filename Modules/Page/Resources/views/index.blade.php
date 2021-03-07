@@ -162,7 +162,7 @@
 
                                         <div class="form-row">
                                             <div class="form-group col-lg-12">
-                                                <input type="text" class="form-control"  required name="Last_Name" id="Last_Name"
+                                                <input type="text" class="form-control"  required name="Name" id="Name"
                                                        placeholder="الإسم بالكامل" autocomplete="off">
                                             </div>
                                             <div class="form-group col-lg-12">
