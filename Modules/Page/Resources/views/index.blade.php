@@ -190,6 +190,9 @@
                                                 <button type="submit" id="formsubmit" class="btn btn-yellow">احجز الآن</button>
                                             </div>
                                         </div>
+                                        <script type='text/javascript' id='VisitorTracking'>var $zoho= $zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:'93a57e7c7c3e4572e13c4bab81a6848fa85f004af8f57c30e2a2441301928b3f', values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement('script');s.type='text/javascript';s.id='zsiqscript';s.defer=true;s.src='https://salesiq.zoho.com/widget';t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);function trackVisitor(){try{if($zoho){var LDTuvidObj = document.forms['WebToLeads4751497000000674015']['LDTuvid'];if(LDTuvidObj){LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();}var firstnameObj = document.forms['WebToLeads4751497000000674015']['First Name'];if(firstnameObj){name = firstnameObj.value +' '+name;}$zoho.salesiq.visitor.name(name);var emailObj = document.forms['WebToLeads4751497000000674015']['Email'];if(emailObj){email = emailObj.value;$zoho.salesiq.visitor.email(email);}}} catch(e){}}</script>
+                                        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=2942070acf7db5bf78c8810eb6e4f06aee879381530aa80d7b8304ab6e23e793gidc720c5569cda887877359d372931a38fb36ebee579e51daa2f0dfadb3d5d4062gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'></script>
+
                                     </form>
                                 </div>
                                 <!-- // booking form -->
@@ -650,8 +653,6 @@
 
         @routes
 
-        <script type='text/javascript' id='VisitorTracking'>var $zoho= $zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:'93a57e7c7c3e4572e13c4bab81a6848fa85f004af8f57c30e2a2441301928b3f', values:{},ready:function(){$zoho.salesiq.floatbutton.visible('hide');}};var d=document;s=d.createElement('script');s.type='text/javascript';s.id='zsiqscript';s.defer=true;s.src='https://salesiq.zoho.com/widget';t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);function trackVisitor(){try{if($zoho){var LDTuvidObj = document.forms['WebToLeads4751497000000674015']['LDTuvid'];if(LDTuvidObj){LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();}var firstnameObj = document.forms['WebToLeads4751497000000674015']['First Name'];if(firstnameObj){name = firstnameObj.value +' '+name;}$zoho.salesiq.visitor.name(name);var emailObj = document.forms['WebToLeads4751497000000674015']['Email'];if(emailObj){email = emailObj.value;$zoho.salesiq.visitor.email(email);}}} catch(e){}}</script>
-        <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=2942070acf7db5bf78c8810eb6e4f06aee879381530aa80d7b8304ab6e23e793gidc720c5569cda887877359d372931a38fb36ebee579e51daa2f0dfadb3d5d4062gid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'></script>
         <script type="text/javascript">
             var form = $('#form');
             $('#form').submit(function(e) {
