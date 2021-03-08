@@ -159,6 +159,7 @@
                                         <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
                                         <input type='text' style='display:none;' id='Lead_Source' name='Lead Source' value="Advertisement">
                                         <input type='text' style='display:none;' id='Email' name='Email' value="user@jumppeak.net">
+                                        <input type='text' style='display:none;' id='LastName' name='Last Name' value="">
 
                                         <div class="form-row">
                                             <div class="form-group col-lg-12">
@@ -657,6 +658,7 @@
 
             var form = $('#form');
             $('#form').submit(function(e) {
+                    $('#LastName').val($('#LEADCF2').val());
                     $.ajax({
                         type: form.attr('method'),
                         url: route('api.leads.store'),
