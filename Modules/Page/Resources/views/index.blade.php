@@ -684,26 +684,9 @@
                                 url: 'https://crm.zoho.com/crm/WebToLeadForm',
                                 data: form.serialize(),
                                 success: function (data) {
-
-                                    $('#form-container').html($('#thankyou').html());
-                                    gtag('event', 'conversion', {
-                                        'send_to': 'AW-604548133/54R_CPDT_PYBEKXYoqAC'
-                                    });
-
-                                    snaptr('track','PURCHASE');
-
-
-                                    twq('track','Purchase', {
-                                        //required parameters
-                                        'value': '4599',
-                                        'currency': 'SAR',
-                                        'num_items': '1',
-                                        'transaction_id' : '1'
-                                    });
                                 },
 
                                 error: function (data) {
-                                    $('#form-container').html($('#thankyou').html());
                                 },
                             });
 
