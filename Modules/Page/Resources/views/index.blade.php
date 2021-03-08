@@ -147,7 +147,7 @@
                                 <h1>لسلامة عينيك</h1>
                                 <!-- booking form -->
                                 <div class="hero__book-form" >
-                                    <form method="post" action="{{ route('api.leads.store') }}" name="WebToLeads4751497000000674015" id="form">
+                                    <form method="post" action="https://crm.zoho.com/crm/WebToLeadForm" name="WebToLeads4751497000000674015" id="form">
                                         @csrf
                                         <input type='text' style='display:none;' name='xnQsjsdp' value='c720c5569cda887877359d372931a38fb36ebee579e51daa2f0dfadb3d5d4062'>
                                         <input type='hidden' name='zc_gad' id='zc_gad' value=''>
@@ -654,12 +654,12 @@
         @routes
 
         <script type="text/javascript">
+
             var form = $('#form');
             $('#form').submit(function(e) {
-                e.preventDefault();
                     $.ajax({
                         type: form.attr('method'),
-                        url: form.attr('action'),
+                        url: route('api.leads.store'),
                         data: form.serialize(),
                         success: function (data) {
 
@@ -678,18 +678,6 @@
                                 'num_items': '1',
                                 'transaction_id' : '1'
                             });
-
-                            $.ajax({
-                                type: form.attr('method'),
-                                url: 'https://crm.zoho.com/crm/WebToLeadForm',
-                                data: form.serialize(),
-                                success: function (data) {
-                                },
-
-                                error: function (data) {
-                                },
-                            });
-
                         },
 
                         error: function (data) {
