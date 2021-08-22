@@ -233,6 +233,7 @@
             <!-- // experts text -->
 
             <!-- offers -->
+            @if(settings()->get('offers.images'))
             <div class="offers d-pad" id="offers">
                 <div class="container">
                     <div class="row">
@@ -271,16 +272,17 @@
                         </div>
                        // offer -->
                         <!-- offer slider -->
+
                         <div class="col-lg-12">
                             <div class="row">
                                 <div class="col-lg-5 d-flex align-items-center">
                                     <div class="offer__text offer__text--slider">
                                         <h3>
-                                            عرض الليزك<br>
-                                            تخلص من نظارتك
+                                            تصحيح النظر<br>
+                                                بالليزيك
                                             <span class="d-block color">
                                             <span class="en">
-                                                4599
+                                                4999
                                             </span>
                                             <small>ريال</small>
                                         </span>
@@ -309,6 +311,7 @@
                 </div>
             </div>
             <!-- // offers -->
+            @endif
 
 
             <!-- video -->
