@@ -22,7 +22,7 @@ class SettingController extends Controller
 
     public function update(Setting $setting, Request $request) {
         $criteria = [
-            'value' => 'required',
+            'value' => '',
         ];
 
         $request->validate($criteria);

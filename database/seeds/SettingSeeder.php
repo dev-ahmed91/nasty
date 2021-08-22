@@ -19,6 +19,12 @@ class SettingSeeder extends Seeder
         ]);
 
         Setting::create([
+            'name' => 'Titlee',
+            'key' => 'common.titlee',
+            'value' => 'ً'
+        ]);
+
+        Setting::create([
             'name' => 'Services Section Description',
             'key' => 'services.description',
             'value' => 'نحن نقدم لكم خدمات عالية الجودة في تخصص العيون بأفضل وأحدث الأجهزة المتطورة لأن هي الحفاظ على أعينكم دوماًً'
@@ -65,18 +71,6 @@ class SettingSeeder extends Seeder
             'name' => 'Offer Slider Images (Comma Seprated)',
             'key' => 'offers.images',
             'value' => '/web/assets/images/offers/01.jpg,/web/assets/images/offers/02.jpg'
-        ]);
-
-        Setting::create([
-            'name' => 'Emails list that the leads will be sent to',
-            'key' => 'leads.mails.to',
-            'value' => 'alkahhalmedicalcomplex@gmail.com,tech@jumppeak.net'
-        ]);
-
-        Setting::create([
-            'name' => 'Email subject when leads are sent in the email',
-            'key' => 'leads.mails.subject',
-            'value' => 'عميل جديد يريد الإستعلام عن عروض الكحال'
         ]);
     }
 }

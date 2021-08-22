@@ -18,7 +18,7 @@ class CreateLeadsTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->string('branch');
-            $table->tinyInteger('sent')->default(0);
+            $table->boolean('sent')->default(0);
             $table->timestamps();
         });
     }
