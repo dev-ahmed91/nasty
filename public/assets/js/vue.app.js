@@ -75419,7 +75419,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Library/WebServer/Documents/jumppeak/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/peterboshra/Workspace/www/core/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

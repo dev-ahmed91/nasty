@@ -10,7 +10,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/web/assets/images/favicons/favicon-16x16.png">
 
         <!-- style -->
-        <link rel="stylesheet" href="/web/assets/css/app.css">
+        <link rel="stylesheet" href="/web/assets/css/main.css">
         <!-- title -->
         <title>{{ settings()->get('common.title') }}</title>
         <!-- meta -->
@@ -653,7 +653,7 @@
         </div>
         <!-- // wrapper end -->
         <!-- JS -->
-        <script src="/web/assets/js/app.min.js"></script>
+        <script src="/web/assets/js/main.min.js"></script>
 
         @routes
 
