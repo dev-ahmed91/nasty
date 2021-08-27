@@ -458,7 +458,7 @@
                         <div class="service">
                             <div class="service__image" data-aos="zoom-in">
                                 <picture>
-                                    <source srcset="assets/images/services/03.webp" type="image/webp"><img src="assets/images/services/03.jpg"
+                                    <source srcset="/web/assets/images/services/03.webp" type="image/webp"><img src="/web/assets/images/services/03.jpg"
                                                                                                            draggable="false" loading="lazy" alt="service name">
                                 </picture>
                             </div>
