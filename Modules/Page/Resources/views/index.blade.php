@@ -339,7 +339,7 @@
                                         بخصم 2000 ريال علي الليزر السطحي
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">-2000</span>
+                                        <span class="h1 d-block">2000-</span>
                                         ريال سعودي
                                     </div>
                                     <a href="#book" class="btn btn-primary">
