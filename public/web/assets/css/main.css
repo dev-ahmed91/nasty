@@ -6417,7 +6417,7 @@ body {
 }
 
 .hero {
-  padding-top: 20rem;
+  padding-top: 16rem;
   position: relative;
   overflow: hidden;
   min-height: 100rem;
@@ -6426,7 +6426,7 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  top: -3.2rem;
+  top: -7.2rem;
   right: 0;
   left: -60rem;
   height: 1008px;
@@ -6437,8 +6437,29 @@ body {
 }
 
 .hero__content {
-  min-height: 65rem;
-  padding-top: var(--spc-16x);
+  min-height: 68rem;
+}
+
+.hero__content,
+.hero__image {
+  margin: 3rem 0;
+}
+
+.hero .swiper-button-next,
+.hero .swiper-container-rtl .swiper-button-prev,
+.hero .swiper-button-prev,
+.hero .swiper-container-rtl .swiper-button-next {
+  top: 52%;
+}
+
+.hero .swiper-button-next,
+.hero .swiper-container-rtl .swiper-button-prev {
+  right: calc(50% + 1.6rem);
+}
+
+.hero .swiper-button-prev,
+.hero .swiper-container-rtl .swiper-button-next {
+  right: calc(50% + 60rem);
 }
 
 .hero__actions {
@@ -6447,7 +6468,7 @@ body {
 
 .hero__image {
   position: absolute;
-  top: 245px;
+  top: 0;
   right: 50%;
   left: 0;
   border-radius: 100%;
@@ -6659,7 +6680,6 @@ body {
 
 .services .service {
   background-color: rgba(248, 252, 253, 0.8);
-  box-shadow: 0px 3px 40px #1d1d1d08;
   margin: var(--spc-2x) 0;
   border-radius: 4rem;
   display: flex;
@@ -10417,6 +10437,11 @@ body {
     padding-top: 0;
   }
 
+  .hero .swiper-button-prev,
+  .hero .swiper-container-rtl .swiper-button-next {
+    right: calc(50% + 50rem);
+  }
+
   .hero__image {
     width: 58rem;
     height: 58rem;
@@ -10447,7 +10472,7 @@ body {
   }
 
   .hero::before {
-    top: -100px;
+    top: -60px;
     left: 0;
     right: 0;
   }
@@ -10456,6 +10481,13 @@ body {
     text-align: center;
     padding-top: 0;
     min-height: 40rem;
+  }
+
+  .hero .swiper-button-next,
+  .hero .swiper-container-rtl .swiper-button-prev,
+  .hero .swiper-button-prev,
+  .hero .swiper-container-rtl .swiper-button-next {
+    display: none;
   }
 
   .hero__text {

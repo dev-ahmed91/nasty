@@ -118,98 +118,142 @@
         </div>
     </header>
 
+
     <!-- hero -->
     <div class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero__content">
-                        <!-- text -->
-                        <div class="hero__text">
-                            <span class="color overline" data-aos="fade-up" data-aos-delay="200">
-                                إحجز الآن لسلامة عينيك
-                            </span>
-                            <h1 data-aos="fade-up" data-aos-delay="400">
-                                أطباء ذوي كفاءة عالية في
-                                طب وجراحة العيون
-                            </h1>
+        <!-- hero sldier -->
+        <div class="hero__slider" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-container heroSlider">
+                <div class="swiper-wrapper">
+                    <!-- hero slide -->
+                    <div class="swiper-slide">
+                        <div class="container">
+                            <div class="hero__content">
+                                <!-- text -->
+                                <div class="hero__text">
+                                    <span class="color overline" data-aos="fade-up" data-aos-delay="200">
+                                        إحجز الآن لسلامة عينيك
+                                    </span>
+                                    <h1 data-aos="fade-up" data-aos-delay="400">
+                                        أفضل أطباء المملكة في
+                                        طب وجراحة العيون
+                                    </h1>
+                                </div>
+                                <!-- // text -->
+                                <!-- action -->
+                                <div class="hero__actions" data-aos="fade-up" data-aos-delay="600">
+                                    <a href="#offers" class="btn btn-white">تصفح العروض المتاحة</a>
+                                    <a href="#book" class="btn btn-primary">إحجز الآن</a>
+                                </div>
+                                <!-- // action -->
+                                <!-- branches -->
+                                <div class="hero__branches">
+                                    <a href="#" class="hero__branch" data-aos="fade-down" data-aos-delay="800">
+                                        <div class="hero__branch-icon">
+                                            <svg class="icon">
+                                                <use href="web/assets/images/icons/icons.svg#location"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="hero__branch-text">
+                                            <span>فرع الدمام</span>
+                                            أبو هريرة، الحمراء، الدمام
+                                        </div>
+                                    </a>
+                                    <a href="#" class="hero__branch" data-aos="fade-down" data-aos-delay="800">
+                                        <div class="hero__branch-icon">
+                                            <svg class="icon">
+                                                <use href="web/assets/images/icons/icons.svg#location"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="hero__branch-text">
+                                            <span>فرع الإحساء</span>
+                                            محاسن، المبرز، الإحساء
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- // branches -->
+                            </div>
+                            <!-- image -->
+                            <div class="hero__image">
+                                <picture>
+                                    <source srcset="web/assets/images/hero.webp" type="image/webp"><img src="web/assets/images/hero.jpg" draggable="false"
+                                                                                                    alt="hero">
+                                </picture>
+                            </div>
+                            <!-- // image -->
                         </div>
-                        <!-- // text -->
-                        <!-- action -->
-                        <div class="hero__actions" data-aos="fade-up" data-aos-delay="600">
-                            <a href="#offers" class="btn btn-white">تصفح العروض المتاحة</a>
-                            <a href="#book" class="btn btn-primary">إحجز الآن</a>
-                        </div>
-                        <!-- // action -->
-                        <!-- branches -->
-                        <div class="hero__branches">
-                            <a href="#" class="hero__branch" data-aos="fade-down" data-aos-delay="800">
-                                <div class="hero__branch-icon">
-                                    <svg class="icon">
-                                        <use href="/web/assets/images/icons/icons.svg#location"></use>
-                                    </svg>
-                                </div>
-                                <div class="hero__branch-text">
-                                    <span>فرع الدمام</span>
-                                    أبو هريرة، الحمراء، الدمام
-                                </div>
-                            </a>
-                            <a href="#" class="hero__branch" data-aos="fade-down" data-aos-delay="800">
-                                <div class="hero__branch-icon">
-                                    <svg class="icon">
-                                        <use href="/web/assets/images/icons/icons.svg#location"></use>
-                                    </svg>
-                                </div>
-                                <div class="hero__branch-text">
-                                    <span>فرع الإحساء</span>
-                                    محاسن، المبرز، الإحساء
-                                </div>
-                            </a>
-                        </div>
-                        <!-- // branches -->
                     </div>
-                </div>
-                <!-- image -->
-                <div class="hero__image">
-                    <picture>
-                        <source srcset="/web/assets/images/hero.webp" type="image/webp"><img src="assets/images/hero.jpg" draggable="false" alt="hero">
-                    </picture>
-                    <!-- contact -->
-                    <div class="overlay__contact">
-                        <!-- phone -->
-                        <a class="overlay__contact-info" href="tel:920022066" data-aos="fade-down" data-aos-delay="800">
-                            <div class="overlay__contact-icon">
-                                <svg class="icon">
-                                    <use href="/web/assets/images/icons/icons.svg#phone"></use>
-                                </svg>
+                    <!-- // hero slide -->
+                    <!-- hero slide -->
+                    <div class="swiper-slide">
+                        <div class="container">
+                            <div class="hero__content">
+                                <!-- text -->
+                                <div class="hero__text">
+                                    <span class="color overline" data-aos="fade-up" data-aos-delay="200">
+                                        نتشرف بالحصول علی
+                                    </span>
+                                    <h1 data-aos="fade-up" data-aos-delay="400">
+                                        شهادة JCI
+                                        في الجودة وسلامة المرضی
+                                    </h1>
+                                </div>
+                                <!-- // text -->
+                                <!-- action -->
+                                <div class="hero__actions" data-aos="fade-up" data-aos-delay="600">
+                                    <a href="#offers" class="btn btn-white">تصفح العروض المتاحة</a>
+                                    <a href="#book" class="btn btn-primary">إحجز الآن</a>
+                                </div>
+                                <!-- // action -->
+                                <!-- branches -->
+                                <div class="hero__branches">
+                                    <a href="#" class="hero__branch" data-aos="fade-down" data-aos-delay="800">
+                                        <div class="hero__branch-icon">
+                                            <svg class="icon">
+                                                <use href="web/assets/images/icons/icons.svg#location"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="hero__branch-text">
+                                            <span>فرع الدمام</span>
+                                            أبو هريرة، الحمراء، الدمام
+                                        </div>
+                                    </a>
+                                    <a href="#" class="hero__branch" data-aos="fade-down" data-aos-delay="800">
+                                        <div class="hero__branch-icon">
+                                            <svg class="icon">
+                                                <use href="web/assets/images/icons/icons.svg#location"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="hero__branch-text">
+                                            <span>فرع الإحساء</span>
+                                            محاسن، المبرز، الإحساء
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- // branches -->
                             </div>
-                            <div class="overlay__contact-text">
-                                الرقم الموحد
-                                <span>920022066</span>
+                            <!-- image -->
+                            <div class="hero__image">
+                                <picture>
+                                    <source srcset="web/assets/images/jci.webp" type="image/webp"><img src="web/assets/images/jci.jpg" draggable="false"
+                                                                                                   alt="hero">
+                                </picture>
                             </div>
-                        </a>
-                        <!-- // phone -->
-                        <!-- whatsapp -->
-                        <a class="overlay__contact-info" href="tel:920022066" data-aos="fade-down" data-aos-delay="800">
-                            <div class="overlay__contact-icon">
-                                <svg class="icon">
-                                    <use href="/web/assets/images/icons/icons.svg#whatsapp"></use>
-                                </svg>
-                            </div>
-                            <div class="overlay__contact-text">
-                                راسلنا من خلال
-                                <span>WhatsApp</span>
-                            </div>
-                        </a>
-                        <!-- // whatsapp -->
+                            <!-- // image -->
+                        </div>
                     </div>
-                    <!-- // contact -->
+                    <!-- // hero slide -->
                 </div>
-                <!-- // image -->
             </div>
         </div>
+        <!-- // hero slider -->
+        <!-- controls -->
+        <div class="swiper-button-next hero-next"></div>
+        <div class="swiper-button-prev hero-prev"></div>
+        <!-- // controls -->
     </div>
     <!-- // hero -->
+
 
 
     <!-- partners -->
@@ -219,7 +263,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-01.webp" type="image/webp"><img src="assets/images/partners/partner-01.png"
+                        <source srcset="/web/assets/images/partners/partner-01.webp" type="image/webp"><img src="web/assets/images/partners/partner-01.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -227,7 +271,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-02.webp" type="image/webp"><img src="assets/images/partners/partner-02.png"
+                        <source srcset="/web/assets/images/partners/partner-02.webp" type="image/webp"><img src="web/assets/images/partners/partner-02.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -235,7 +279,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-03.webp" type="image/webp"><img src="assets/images/partners/partner-03.png"
+                        <source srcset="/web/assets/images/partners/partner-03.webp" type="image/webp"><img src="web/assets/images/partners/partner-03.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -243,7 +287,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-04.webp" type="image/webp"><img src="assets/images/partners/partner-04.png"
+                        <source srcset="/web/assets/images/partners/partner-04.webp" type="image/webp"><img src="web/assets/images/partners/partner-04.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -251,7 +295,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-05.webp" type="image/webp"><img src="assets/images/partners/partner-05.png"
+                        <source srcset="/web/assets/images/partners/partner-05.webp" type="image/webp"><img src="web/assets/images/partners/partner-05.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -259,7 +303,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-06.webp" type="image/webp"><img src="assets/images/partners/partner-06.png"
+                        <source srcset="/web/assets/images/partners/partner-06.webp" type="image/webp"><img src="web/assets/images/partners/partner-06.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -292,10 +336,10 @@
                                         رؤيتك أوضح مع
                                     </span>
                                     <h3>
-                                        عملية إزالة المياة البيضاء بتقنية الفاكو
+                                        علاج جفاف العين لتجنب مضاعفاته
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">4000</span>
+                                        <span class="h1 d-block">5000</span>
                                         ريال سعودي
                                     </div>
                                     <a href="#book" class="btn btn-primary">
@@ -303,7 +347,7 @@
                                     </a>
                                     <!-- number -->
                                     <div class="offer__number">
-                                        عرض 1 من 3
+                                        عرض 3 من 3
                                     </div>
                                     <!-- // number -->
                                 </div>
@@ -328,10 +372,10 @@
                                         رؤيتك أوضح مع
                                     </span>
                                     <h3>
-                                        عملية تصحيح النظر بالليزك
+                                        علاج جفاف العين لتجنب مضاعفاته
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">10000</span>
+                                        <span class="h1 d-block">5000</span>
                                         ريال سعودي
                                     </div>
                                     <a href="#book" class="btn btn-primary">
@@ -339,11 +383,10 @@
                                     </a>
                                     <!-- number -->
                                     <div class="offer__number">
-                                        عرض 2 من 3
+                                        عرض 3 من 3
                                     </div>
                                     <!-- // number -->
-                                </div>
-                                <!-- // info -->
+                                </div>                                <!-- // info -->
                                 <!-- image -->
                                 <div class="offer__image">
                                     <picture>
@@ -418,163 +461,167 @@
             <!-- // title -->
             <!-- services -->
             <div class="services__container">
-                <div class="row">
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/01.webp" type="image/webp"><img src="assets/images/services/01.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
+                <!-- services slider -->
+                <div class="services__slider" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-container servicesSlider">
+                        <div class="swiper-wrapper">
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/01.webp" type="image/webp"><img src="web/assets/images/services/01.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات الليزك وتصحيح الابصار
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات الليزك وتصحيح الابصار
-                                </h3>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/02.webp" type="image/webp"><img src="web/assets/images/services/02.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات ازالة المياه البيضاء بتقنية الفاكو
+                                        </h3>
+                                    </div>
+                                </div>
                             </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/03.webp" type="image/webp"><img src="web/assets/images/services/03.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات السائل الزجاجي وانفصال الشبكية لمرضي السكر
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/04.webp" type="image/webp"><img src="web/assets/images/services/04.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            علاج اعتلال الشبكية السكرى والناتج عن مضاعفات مرض السكر
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/05.webp" type="image/webp"><img src="web/assets/images/services/05.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات المياه الزرقاء وعلاج ارتفاع ضغط العين
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/06.webp" type="image/webp"><img src="web/assets/images/services/06.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات مرض حول العين عند الاطفال والكبار
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/07.webp" type="image/webp"><img src="web/assets/images/services/07.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات انسداد المجرى الدمعى وجفاف العين لدى الكبار
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/08.webp" type="image/webp"><img src="web/assets/images/services/08.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عملية زراعة العدسات لعلاج قصر او طول النظر
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
+                            <!-- service -->
+                            <div class="swiper-slide">
+                                <div class="service">
+                                    <div class="service__image" data-aos="zoom-in">
+                                        <picture>
+                                            <source srcset="web/assets/images/services/09.webp" type="image/webp"><img src="web/assets/images/services/09.jpg"
+                                                                                                                   draggable="false" loading="lazy" alt="service name">
+                                        </picture>
+                                    </div>
+                                    <div class="service__text" data-aos="zoom-in">
+                                        <h3 class="h5">
+                                            عمليات تجميل الجفون
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // service -->
                         </div>
                     </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/02.webp" type="image/webp"><img src="assets/images/services/02.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات ازالة المياه البيضاء بتقنية الفاكو
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/03.webp" type="image/webp"><img src="/web/assets/images/services/03.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات السائل الزجاجي وانفصال الشبكية لمرضي السكر
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/04.webp" type="image/webp"><img src="assets/images/services/04.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    علاج اعتلال الشبكية السكرى والناتج عن مضاعفات مرض السكر
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/05.webp" type="image/webp"><img src="assets/images/services/05.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات المياه الزرقاء وعلاج ارتفاع ضغط العين
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/06.webp" type="image/webp"><img src="assets/images/services/06.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات مرض حول العين عند الاطفال والكبار
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/07.webp" type="image/webp"><img src="assets/images/services/07.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات انسداد المجرى الدمعى وجفاف العين لدى الكبار
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/08.webp" type="image/webp"><img src="assets/images/services/08.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عملية زراعة العدسات لعلاج قصر او طول النظر
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
-                    <!-- service -->
-                    <div class="col-md-6 col-xl-4">
-                        <div class="service">
-                            <div class="service__image" data-aos="zoom-in">
-                                <picture>
-                                    <source srcset="/web/assets/images/services/09.webp" type="image/webp"><img src="assets/images/services/09.jpg"
-                                                                                                           draggable="false" loading="lazy" alt="service name">
-                                </picture>
-                            </div>
-                            <div class="service__text" data-aos="zoom-in">
-                                <h3 class="h5">
-                                    عمليات تجميل الجفون
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- // service -->
                 </div>
-            </div>
-            <!-- // services -->
+            </div>            <!-- // services -->
         </div>
     </div>
     <!-- // services -->
@@ -640,43 +687,6 @@
         </div>
     </div>
     <!-- // doctors -->
-
-
-    <!-- jci -->
-    <div class="jci d-pad-b">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <!-- image -->
-                    <div class="jci__image" data-aos="zoom-in">
-                        <picture>
-                            <source srcset="/web/assets/images/jci.webp" type="image/webp"><img src="/web/assets/images/jci.jpg" draggable="false"
-                                                                                           loading="lazy" alt="jci">
-                        </picture>
-                    </div>
-                    <!-- // image -->
-                </div>
-                <div class="col-lg-5 d-flex align-items-center">
-                    <div class="jci__text">
-                        <span class="overline" data-aos="fade-down">
-                            نتشرف بالحصول علی
-                        </span>
-                        <h2 class="title" data-aos="fade-down" data-aos-delay="200">
-                            شهادة JCI <br>
-                            في الجودة وسلامة المرضی
-                        </h2>
-                        <p data-aos="fade-up" data-aos-delay="600">
-                            تم بحمد الله حصول مجمع الكحال الطبي علی شهادة JCIA “المعيار الدولي للتميز” من قِبَل اللجنة المشتركة الدولية -الرائد
-                            العالمي في الرعاية الصحية. حيث استطاع تحقيق ما يزيد عن 350 معيار من المعايير الدولية المطلوبة، ونعدكم بالتطوّر المستمر.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- // jci -->
-
-
 
     <!-- testimonials -->
     <div class="testimonials d-pad-b">
@@ -924,36 +934,6 @@
                                 <source srcset="/web/assets/images/main.webp" type="image/webp"><img src="/web/assets/images/main.jpg" draggable="false"
                                                                                                 loading="lazy" alt="الكحال">
                             </picture>
-                            <!-- contact -->
-                            <div class="overlay__contact">
-                                <!-- phone -->
-                                <a class="overlay__contact-info" href="tel:920022066">
-                                    <div class="overlay__contact-icon">
-                                        <svg class="icon">
-                                            <use href="assets/images/icons/icons.svg#phone"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="overlay__contact-text">
-                                        الرقم الموحد
-                                        <span>920022066</span>
-                                    </div>
-                                </a>
-                                <!-- // phone -->
-                                <!-- whatsapp -->
-                                <a class="overlay__contact-info" href="tel:920022066">
-                                    <div class="overlay__contact-icon">
-                                        <svg class="icon">
-                                            <use href="assets/images/icons/icons.svg#whatsapp"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="overlay__contact-text">
-                                        راسلنا من خلال
-                                        <span>WhatsApp</span>
-                                    </div>
-                                </a>
-                                <!-- // whatsapp -->
-                            </div>
-                            <!-- // contact -->
                         </div>
                         <!-- // image -->
                     </div>
@@ -970,7 +950,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-01.webp" type="image/webp"><img src="assets/images/partners/partner-01.png"
+                        <source srcset="/web/assets/images/partners/partner-01.webp" type="image/webp"><img src="web/assets/images/partners/partner-01.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -978,7 +958,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-02.webp" type="image/webp"><img src="assets/images/partners/partner-02.png"
+                        <source srcset="/web/assets/images/partners/partner-02.webp" type="image/webp"><img src="web/assets/images/partners/partner-02.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -986,7 +966,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-03.webp" type="image/webp"><img src="assets/images/partners/partner-03.png"
+                        <source srcset="/web/assets/images/partners/partner-03.webp" type="image/webp"><img src="web/assets/images/partners/partner-03.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -994,7 +974,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-04.webp" type="image/webp"><img src="assets/images/partners/partner-04.png"
+                        <source srcset="/web/assets/images/partners/partner-04.webp" type="image/webp"><img src="web/assets/images/partners/partner-04.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -1002,7 +982,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-05.webp" type="image/webp"><img src="assets/images/partners/partner-05.png"
+                        <source srcset="/web/assets/images/partners/partner-05.webp" type="image/webp"><img src="web/assets/images/partners/partner-05.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>
@@ -1010,7 +990,7 @@
                 <!-- partner -->
                 <div class="partner" data-aos="fade-up">
                     <picture>
-                        <source srcset="/web/assets/images/partners/partner-06.webp" type="image/webp"><img src="assets/images/partners/partner-06.png"
+                        <source srcset="/web/assets/images/partners/partner-06.webp" type="image/webp"><img src="web/assets/images/partners/partner-06.png"
                                                                                                        draggable="false" alt="partner name">
                     </picture>
                 </div>

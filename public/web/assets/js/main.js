@@ -43,6 +43,25 @@ $(window).on('scroll', function () {
 });
 
 // // swiper
+var heroSlider = new Swiper(".heroSlider", {
+    effect: "fade",
+    fadeEffect: {
+        crossFade: true
+    },
+    grabCursor: true,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    autoplay: {
+        delay: 2750,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".hero-next",
+        prevEl: ".hero-prev",
+    }
+});
+
 var offersSlider = new Swiper(".offersSlider", {
     effect: "fade",
     fadeEffect: {
@@ -59,6 +78,26 @@ var offersSlider = new Swiper(".offersSlider", {
     navigation: {
         nextEl: ".offers-next",
         prevEl: ".offers-prev",
+    }
+});
+
+var servicesSlider = new Swiper('.servicesSlider', {
+    spaceBetween: 16,
+    loop: true,
+    autoplay: {
+        delay: 2750,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1199: {
+            slidesPerView: 3,
+        },
     }
 });
 
