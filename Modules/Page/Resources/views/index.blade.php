@@ -806,7 +806,8 @@
                                             <label for='Mobile'>رقم الجوال <span style='color:red;'>*</span></label>
                                         </div>
                                         <div class='zcwf_col_fld'>
-                                            <input type='text' class="form-control" id='Mobile' name='Mobile' maxlength='30' placeholder="رقم الجوال">
+                                            <input type='text' class="form-control" id='Mobile' name='Mobile' maxlength='30' placeholder="رقم الجوال" onchange="return validatePhone();">
+                                            <label  id='phone_validation_message' style="display: none"> يرجى إدخال رقم هاتف صحيح </label>
                                             <div class='zcwf_col_help'></div>
                                         </div>
                                     </div>
@@ -1023,6 +1024,17 @@
 
         <script type="text/javascript">
 
+            function validatePhone() {
+                phone = $("#Mobile").val();
+                var regex = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
+                if (regex.test(phone)) {
+                    $("#phone_validation_message").css('display', 'none');
+                    document.getElementById("formsubmit").disabled = false;
+                } else {
+                    $("#phone_validation_message").css('display', 'block');
+                    document.getElementById("formsubmit").disabled = true;
+                }
+            }
             var form = $('#form');
             $('#form').submit(function(e) {
                     $('#LastName').val($('#LEADCF2').val());
