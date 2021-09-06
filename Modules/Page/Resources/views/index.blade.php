@@ -333,13 +333,13 @@
                                 <!-- info -->
                                 <div class="offer__info text-center">
                                     <span class="overline">
-                                        رؤيتك أوضح مع
+                                        تخلص من نظارتك
                                     </span>
                                     <h3>
-                                        علاج جفاف العين لتجنب مضاعفاته
+                                        بخصم 2000 ريال علي الليزر السطحي
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">5000</span>
+                                        <span class="h1 d-block">-2000</span>
                                         ريال سعودي
                                     </div>
                                     <a href="#book" class="btn btn-primary">
@@ -347,7 +347,7 @@
                                     </a>
                                     <!-- number -->
                                     <div class="offer__number">
-                                        عرض 3 من 3
+                                        عرض 3 من 1
                                     </div>
                                     <!-- // number -->
                                 </div>
@@ -369,14 +369,14 @@
                                 <!-- info -->
                                 <div class="offer__info text-center">
                                     <span class="overline">
-                                        رؤيتك أوضح مع
+                                        عرض بالفترة الصباحية
                                     </span>
                                     <h3>
-                                        علاج جفاف العين لتجنب مضاعفاته
+                                        خصم علي كشف العين بالفتره الصباحيه لمده اسبوع
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">5000</span>
-                                        ريال سعودي
+                                        <span class="h1 d-block">%50</span>
+                                        خصم
                                     </div>
                                     <a href="#book" class="btn btn-primary">
                                         إحجز الآن
@@ -386,7 +386,8 @@
                                         عرض 3 من 3
                                     </div>
                                     <!-- // number -->
-                                </div>                                <!-- // info -->
+                                </div>
+                                <!-- // info -->
                                 <!-- image -->
                                 <div class="offer__image">
                                     <picture>
@@ -404,13 +405,13 @@
                                 <!-- info -->
                                 <div class="offer__info text-center">
                                     <span class="overline">
-                                        رؤيتك أوضح مع
+                                        صحح بصرك لمرة واحدة في العمر
                                     </span>
                                     <h3>
-                                        علاج جفاف العين لتجنب مضاعفاته
+                                        عرض الفيمتوليزك
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">5000</span>
+                                        <span class="h1 d-block">5999</span>
                                         ريال سعودي
                                     </div>
                                     <a href="#book" class="btn btn-primary">
@@ -418,7 +419,7 @@
                                     </a>
                                     <!-- number -->
                                     <div class="offer__number">
-                                        عرض 3 من 3
+                                        عرض 3 من 2
                                     </div>
                                     <!-- // number -->
                                 </div>
