@@ -897,7 +897,7 @@
                         <!-- image -->
                         <div class="book__image" data-aos="zoom-in">
                             <picture>
-                                <source srcset="/web/assets/images/main.webp" type="image/webp"><img src="/web/assets/images/main.jpg" draggable="false"
+                                <source srcset="{{ settings()->get('form.image') }}" type="image/webp"><img src="{{ settings()->get('form.image') }}" draggable="false"
                                                                                                 loading="lazy" alt="الكحال">
                             </picture>
                         </div>
