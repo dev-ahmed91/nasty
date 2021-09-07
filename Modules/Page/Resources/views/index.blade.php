@@ -369,21 +369,21 @@
                                 <!-- info -->
                                 <div class="offer__info text-center">
                                     <span class="overline">
-                                        عرض بالفترة الصباحية
+                                        صحح بصرك لمرة واحدة في العمر
                                     </span>
                                     <h3>
-                                        خصم علي كشف العين بالفتره الصباحيه لمده اسبوع
+                                        عرض الفيمتوليزك
                                     </h3>
                                     <div class="offer__price">
-                                        <span class="h1 d-block">%50</span>
-                                        خصم
+                                        <span class="h1 d-block">5999</span>
+                                        ريال سعودي
                                     </div>
                                     <a href="#book" class="btn btn-primary">
                                         إحجز الآن
                                     </a>
                                     <!-- number -->
                                     <div class="offer__number">
-                                        عرض 3 من 3
+                                        عرض 3 من 2
                                     </div>
                                     <!-- // number -->
                                 </div>
