@@ -2,6 +2,7 @@
 
 namespace Modules\Doctor\Controllers\Admin;
 
+use App\Constants\Statuses;
 use App\Http\Controllers\Controller;
 use App\Http\Services\UploaderService;
 use Modules\Doctor\Models\Doctor;
@@ -77,6 +78,19 @@ class DoctorController extends Controller
             $doctor->image = $this->uploaderService->upload($request->file("image"), "doctors");
         }
 
+        $doctor->save();
+
+        return redirect()->route('admin.doctors.index')->with(['success' => 'Updated Successfully']);
+    }
+    public function enable(Doctor $doctor, Request $request) {
+        $doctor->status = Statuses::ACTIVE;
+        $doctor->save();
+
+        return redirect()->route('admin.doctors.index')->with(['success' => 'Updated Successfully']);
+    }
+
+    public function disable(Doctor $doctor, Request $request) {
+        $doctor->status = Statuses::DISABLED;
         $doctor->save();
 
         return redirect()->route('admin.doctors.index')->with(['success' => 'Updated Successfully']);
