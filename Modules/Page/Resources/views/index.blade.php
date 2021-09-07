@@ -355,8 +355,8 @@
                                 <!-- image -->
                                 <div class="offer__image">
                                     <picture>
-                                        <source srcset="/web/assets/images/offers/offer-01.webp" type="image/webp"><img
-                                                src="/web/assets/images/offers/offer-01.jpg" loading="lazy" draggable="false" alt="offer name">
+                                        <source srcset="/web/assets/images/offers/offer-02.webp" type="image/webp"><img
+                                                src="/web/assets/images/offers/offer-02.jpg" loading="lazy" draggable="false" alt="offer name">
                                     </picture>
                                 </div>
                                 <!-- // image -->
@@ -391,8 +391,8 @@
                                 <!-- image -->
                                 <div class="offer__image">
                                     <picture>
-                                        <source srcset="/web/assets/images/offers/offer-02.webp" type="image/webp"><img
-                                                src="/web/assets/images/offers/offer-02.jpg" loading="lazy" draggable="false" alt="offer name">
+                                        <source srcset="/web/assets/images/offers/offer-01.webp" type="image/webp"><img
+                                                src="/web/assets/images/offers/offer-01.jpg" loading="lazy" draggable="false" alt="offer name">
                                     </picture>
                                 </div>
                                 <!-- // image -->
