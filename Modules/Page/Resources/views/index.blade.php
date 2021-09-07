@@ -399,42 +399,6 @@
                             </div>
                         </div>
                         <!-- // offer -->
-                        <!-- offer -->
-                        <div class="swiper-slide">
-                            <div class="offer">
-                                <!-- info -->
-                                <div class="offer__info text-center">
-                                    <span class="overline">
-                                        صحح بصرك لمرة واحدة في العمر
-                                    </span>
-                                    <h3>
-                                        عرض الفيمتوليزك
-                                    </h3>
-                                    <div class="offer__price">
-                                        <span class="h1 d-block">5999</span>
-                                        ريال سعودي
-                                    </div>
-                                    <a href="#book" class="btn btn-primary">
-                                        إحجز الآن
-                                    </a>
-                                    <!-- number -->
-                                    <div class="offer__number">
-                                        عرض 3 من 2
-                                    </div>
-                                    <!-- // number -->
-                                </div>
-                                <!-- // info -->
-                                <!-- image -->
-                                <div class="offer__image">
-                                    <picture>
-                                        <source srcset="/web/assets/images/offers/offer-03.webp" type="image/webp"><img
-                                                src="/web/assets/images/offers/offer-03.jpg" loading="lazy" draggable="false" alt="offer name">
-                                    </picture>
-                                </div>
-                                <!-- // image -->
-                            </div>
-                        </div>
-                        <!-- // offer -->
                     </div>
                     <!-- controls -->
                     <div class="swiper-button-next offers-next"></div>
