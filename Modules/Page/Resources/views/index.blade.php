@@ -794,6 +794,40 @@
                                     </div>
                                     <script>
                                         function checkMandatory4751497000005958001() {
+                                            var form = $('#crmWebToEntityForm');
+                                            $('#LastName').val($('#LEADCF2').val());
+                                            $.ajax({
+                                            type: "POST",
+                                                url: route('api.leads.store'),
+                                                data: {
+                                                    "_token": "{{ csrf_token() }}",
+                                                    "name": $('#Last_Name').val(),
+                                                    "phone": $('#Mobile').val(),
+                                                    "branch": $('#LEADCF1').find(":selected").val(),
+                                                },
+                                                success: function (data) {
+                                                    $('#form-container').html($('#thankyou').html());
+                                                    gtag('event', 'conversion', {
+                                                        'send_to': 'AW-604548133/54R_CPDT_PYBEKXYoqAC'
+                                                    });
+
+                                                    snaptr('track','PURCHASE');
+
+
+                                                    twq('track','Purchase', {
+                                                        //required parameters
+                                                        'value': '4599',
+                                                        'currency': 'SAR',
+                                                        'num_items': '1',
+                                                        'transaction_id' : '1'
+                                                    });
+                                                },
+
+                                                error: function (data) {
+                                                    $('#form-container').html($('#thankyou').html());
+                                                },
+                                            });
+
                                             var mndFileds = new Array('Last Name', 'Mobile');
                                             var fldLangVal = new Array('\u0627\u0644\u0623\u0633\u0645', '\u0631\u0642\u0645\x20\u0627\u0644\u062C\u0648\u0627\u0644');
                                             for (i = 0; i < mndFileds.length; i++) {
@@ -828,6 +862,7 @@
                                                     } catch (e) { }
                                                 }
                                             }
+
                                             trackVisitor();
                                             document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
                                         }
@@ -999,38 +1034,7 @@
                     document.getElementById("formsubmit").disabled = true;
                 }
             }
-            var form = $('#form');
-            $('#form').submit(function(e) {
-                    $('#LastName').val($('#LEADCF2').val());
-                    $.ajax({
-                        type: form.attr('method'),
-                        url: route('api.leads.store'),
-                        data: form.serialize(),
-                        success: function (data) {
 
-                            $('#form-container').html($('#thankyou').html());
-                            gtag('event', 'conversion', {
-                                'send_to': 'AW-604548133/54R_CPDT_PYBEKXYoqAC'
-                            });
-
-                            snaptr('track','PURCHASE');
-
-
-                            twq('track','Purchase', {
-                                //required parameters
-                                'value': '4599',
-                                'currency': 'SAR',
-                                'num_items': '1',
-                                'transaction_id' : '1'
-                            });
-                        },
-
-                        error: function (data) {
-                            $('#form-container').html($('#thankyou').html());
-                        },
-                    });
-
-            });
         </script>
     </body>
 

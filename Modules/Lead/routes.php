@@ -14,5 +14,5 @@ Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', $namespa
 });
 
 Route::prefix('/api')->attribute('namespace', $namespace.'Api')->group( function () {
-    Route::post('/leads', 'LeadController@store')->name('api.leads.store');
+    Route::post('/add-leads', 'LeadController@store')->name('api.leads.store');
 });
