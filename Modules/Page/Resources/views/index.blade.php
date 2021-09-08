@@ -1021,6 +1021,8 @@
 
         @routes
 
+        {!! settings()->get('pages.body.scripts') !!}
+
         <script type="text/javascript">
 
             function validatePhone() {
