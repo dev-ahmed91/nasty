@@ -18,7 +18,7 @@
                                 <div class="form-row">
                                     @include('admin.layout.field', field('disabled', 'name', 'Name', 6, $form))
                                     @include('admin.layout.field', field('disabled', 'key', 'Key', 6, $form))
-                                    @include('admin.layout.field', field('text', 'value', 'value', 12, $form))
+                                    @include('admin.layout.field', field('textarea', 'value', 'value', 12, $form))
                                 </div>
 
 
