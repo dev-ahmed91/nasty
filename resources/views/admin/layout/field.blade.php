@@ -6,6 +6,14 @@
     </div>
 @endif
 
+@if(in_array($type, ['textarea']))
+    <div class="form-group col-md-{{$cols}} bmd-form-group  @error($name) has-danger @enderror">
+        <label for="{{ $name }}"> {{ $label }} @error($name) ({{ $message }}) @enderror</label>
+        @php ($default = $form ? $form->$name : '' )
+        <textarea name="{{ $name }}" id="{{ $name }}"  class="form-control" rows="10">{{ old($name, $default) }}</textarea>
+    </div>
+@endif
+
 @if(in_array($type, ['file']))
     <div class="form-group col-md-{{$cols}} custom-file bmd-form-group  @error($name) has-danger @enderror">
         <label for="{{ $name }}" class="custom-file-label"> {{ $label }} @error($name) ({{ $message }}) @enderror</label>
