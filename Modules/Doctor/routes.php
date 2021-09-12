@@ -11,4 +11,6 @@ Route::prefix('/api')->middleware('auth:web')->attribute('namespace', $namespace
 
 Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', $namespace.'Admin')->as('admin.')->group( function () {
     Route::resource('doctors', 'DoctorController')->only('index', 'edit', 'update', 'create', 'store');
+    Route::get('/doctors/{doctor}/disable', 'DoctorController@disable')->name('doctors.disable');
+    Route::get('/doctors/{doctor}/enable', 'DoctorController@enable')->name('doctors.enable');
 });

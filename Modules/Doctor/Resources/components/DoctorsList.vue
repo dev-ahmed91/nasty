@@ -42,32 +42,38 @@
                     <div class="table-responsive">
                         <table class="table table-responsive-md text-small">
                             <thead>
-                                <tr>
-                                    <th class="width10">#</th>
-                                    <th>Name</th>
-                                    <th>Branch</th>
-                                    <th>Description</th>
-                                    <th></th>
-                                </tr>
+                            <tr>
+                                <th class="width10">#</th>
+                                <th>Name</th>
+                                <th>Branch</th>
+                                <th>Description</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="doctor in doctors.data">
-                                    <td><strong>{{ doctor.id }}</strong></td>
-                                    <td>{{ doctor.name }}</td>
-                                    <td>{{ doctor.branch}}</td>
-                                    <td>{{ doctor.description}}</td>
-                                    <td>{{ moment(doctor.created_at).format('DD MMM YYYY, hh:mm A') }}</td>
-                                    <td>
-                                        <div class="dropdown">
-                                            <button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
-                                                <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
-                                            </button>
-                                            <div class="dropdown-menu">
-                                                <a class="dropdown-item" :href="route('admin.doctors.edit', {doctor: doctor.id, page: page})">Edit</a>
-                                            </div>
+                            <tr v-for="doctor in doctors.data">
+                                <td><strong>{{ doctor.id }}</strong></td>
+                                <td>{{ doctor.name }}</td>
+                                <td>{{ doctor.branch}}</td>
+                                <td>{{ doctor.description}}</td>
+                                <td>
+                                    <span v-bind:class="{ 'badge-success' : (doctor.status === 2) , 'badge-light' : (doctor.status === 1) }" class="badge">{{ doctor.statusLabel }}</span>
+                                </td>
+                                <td>{{ moment(doctor.created_at).format('DD MMM YYYY, hh:mm A') }}</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-success light sharp" data-toggle="dropdown">
+                                            <svg width="20px" height="20px" viewBox="0 0 24 24" version="1.1"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><rect x="0" y="0" width="24" height="24"/><circle fill="#000000" cx="5" cy="12" r="2"/><circle fill="#000000" cx="12" cy="12" r="2"/><circle fill="#000000" cx="19" cy="12" r="2"/></g></svg>
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" :href="route('admin.doctors.edit', {doctor: doctor.id, page: page})">Edit</a>
+                                            <a class="dropdown-item" :href="route('admin.doctors.enable', {doctor: doctor.id, page: page})">Enable</a>
+                                            <a class="dropdown-item" :href="route('admin.doctors.disable', {doctor: doctor.id, page: page})">Disable</a>
                                         </div>
-                                    </td>
-                                </tr>
+                                    </div>
+                                </td>
+                            </tr>
 
                             </tbody>
                         </table>
@@ -115,18 +121,18 @@ export default {
                 }))
                 .then(response => {
                     this.doctors = response.data;
-                });
-        },
-        fetchSorts() {
-            this.sorts = {
-                1: { 'id' : 'created_at', 'direction': 'DESC', 'label' : 'Created DESC', 'class' : 'dark'},
-                2: { 'id' : 'created_at', 'direction': 'ASC', 'label' : 'Created ASC', 'class' : 'dark'},
-            };
-        },
-        changeSort(sort) {
-            this.sort = (sort !== undefined) ? this.sort = sort : '';
-            this.fetchDoctors();
-        },
+            });
+            },
+            fetchSorts() {
+                this.sorts = {
+                    1: { 'id' : 'created_at', 'direction': 'DESC', 'label' : 'Created DESC', 'class' : 'dark'},
+                    2: { 'id' : 'created_at', 'direction': 'ASC', 'label' : 'Created ASC', 'class' : 'dark'},
+                };
+            },
+            changeSort(sort) {
+                this.sort = (sort !== undefined) ? this.sort = sort : '';
+                this.fetchDoctors();
+            },
+        }
     }
-}
 </script>

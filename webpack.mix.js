@@ -39,23 +39,23 @@ mix.scripts([
 
 
 // Frontend Version
-
-mix.styles([
-    "public/web/assets/css/bootstrap.min.css",
-    "public/web/assets/css/owlcarousel/owl.carousel.min.css",
-    "public/web/assets/css/owlcarousel/owl.theme.default.min.css",
-    "public/web/assets/css/animate.min.css",
-    "public/web/assets/css/aos.css",
-    "public/web/assets/css/main-style.min.css"
-], 'public/web/assets/css/app.css');
-
-
-
-mix.scripts([
-    "public/web/assets/js/jquery-3.4.1.min.js",
-    "public/web/assets/js/bootstrap.bundle.min.js",
-    "public/web/assets/js/owl.carousel.min.js",
-    "public/web/assets/js/aos.js",
-    "public/web/assets/js/app.js"
-
-], 'public/web/assets/js/app.min.js');
+//
+// mix.styles([
+//     "public/web/assets/css/bootstrap.min.css",
+//     "public/web/assets/css/owlcarousel/owl.carousel.min.css",
+//     "public/web/assets/css/owlcarousel/owl.theme.default.min.css",
+//     "public/web/assets/css/animate.min.css",
+//     "public/web/assets/css/aos.css",
+//     "public/web/assets/css/main-style.min.css"
+// ], 'public/web/assets/css/app.css');
+//
+//
+//
+// mix.scripts([
+//     "public/web/assets/js/jquery-3.4.1.min.js",
+//     "public/web/assets/js/bootstrap.bundle.min.js",
+//     "public/web/assets/js/owl.carousel.min.js",
+//     "public/web/assets/js/aos.js",
+//     "public/web/assets/js/app.js"
+//
+// ], 'public/web/assets/js/app.min.js');

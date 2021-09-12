@@ -2419,6 +2419,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'doctors-list',
   data: function data() {
@@ -61766,6 +61772,20 @@ var render = function() {
                         _c("td", [_vm._v(_vm._s(doctor.description))]),
                         _vm._v(" "),
                         _c("td", [
+                          _c(
+                            "span",
+                            {
+                              staticClass: "badge",
+                              class: {
+                                "badge-success": doctor.status === 2,
+                                "badge-light": doctor.status === 1
+                              }
+                            },
+                            [_vm._v(_vm._s(doctor.statusLabel))]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("td", [
                           _vm._v(
                             _vm._s(
                               _vm
@@ -61861,6 +61881,34 @@ var render = function() {
                                   }
                                 },
                                 [_vm._v("Edit")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  attrs: {
+                                    href: _vm.route("admin.doctors.enable", {
+                                      doctor: doctor.id,
+                                      page: _vm.page
+                                    })
+                                  }
+                                },
+                                [_vm._v("Enable")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "dropdown-item",
+                                  attrs: {
+                                    href: _vm.route("admin.doctors.disable", {
+                                      doctor: doctor.id,
+                                      page: _vm.page
+                                    })
+                                  }
+                                },
+                                [_vm._v("Disable")]
                               )
                             ])
                           ])
@@ -61914,6 +61962,8 @@ var staticRenderFns = [
         _c("th", [_vm._v("Branch")]),
         _vm._v(" "),
         _c("th", [_vm._v("Description")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Status")]),
         _vm._v(" "),
         _c("th")
       ])
@@ -75419,7 +75469,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Library/WebServer/Documents/jumppeak/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/peterboshra/Workspace/www/core/resources/js/app.js */"./resources/js/app.js");
 
 
 /***/ })

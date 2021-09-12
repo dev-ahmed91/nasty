@@ -2,6 +2,7 @@
 
 namespace Modules\Page\Controllers\Web;
 
+use App\Constants\Statuses;
 use App\Http\Controllers\Controller;
 use Modules\Doctor\Models\Doctor;
 
@@ -11,7 +12,7 @@ class PageController extends Controller
 
     public function index()
     {
-        $doctors = Doctor::all();
+        $doctors = Doctor::query()->where('status', Statuses::ACTIVE)->get();
 
         return view($this->viewsPath.'index', compact('doctors'));
     }

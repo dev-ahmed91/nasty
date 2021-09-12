@@ -28,9 +28,9 @@ class LeadController extends Controller
         $lead = new Lead();
 
         $lead->fill([
-            'branch' => $request->get('LEADCF1'),
-            'name' => $request->get('LEADCF2'),
-            'phone' => $request->get('Mobile')
+            'branch' => $request->get('branch'),
+            'name' => $request->get('name'),
+            'phone' => $request->get('phone')
         ]);
 
         $lead->save();
