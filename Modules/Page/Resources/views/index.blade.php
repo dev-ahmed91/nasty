@@ -808,7 +808,7 @@
                                                 success: function (data) {
                                                     $('#form-container').html($('#thankyou').html());
                                                     gtag('event', 'conversion', {
-                                                        'send_to': 'AW-604548133/54R_CPDT_PYBEKXYoqAC'
+                                                        'send_to': 'AW-604548133/9wkmCPj2suoBEKXYoqAC'
                                                     });
 
                                                     snaptr('track','PURCHASE');
@@ -821,8 +821,27 @@
                                                         'num_items': '1',
                                                         'transaction_id' : '1'
                                                     });
-                                                },
+                                                    snaptr('track', ' Book Now', {
+                                                        'currency': 'SAR', 'price': 333.33,
+                                                        'item_ids': ['097man', '16span']
+                                                    });
+                                                    fbq('track', 'Leads', {currency: "SAR", value: 30.00});
 
+                                                    function gtag_report_conversion(url) {
+                                                        var callback = function () {
+                                                            if (typeof(url) != 'undefined') {
+                                                                window.location = url;
+                                                            }
+                                                        };
+                                                        gtag('event', 'conversion', {
+                                                            'send_to': 'AW-604548133/9wkmCPj2suoBEKXYoqAC',
+                                                            'value': 7.0,
+                                                            'currency': 'SAR',
+                                                            'event_callback': callback
+                                                        });
+                                                        return false;
+                                                    }
+                                                },
                                                 error: function (data) {
                                                     $('#form-container').html($('#thankyou').html());
                                                 },
