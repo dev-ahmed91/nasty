@@ -101,6 +101,66 @@
 
     <body>
 
+
+    <!-- offers end -->
+    <div class="offers-end text-center">
+        <h2 class="h6 color" id="counterEnd">باقي على إنتهاء العروض</h2>
+        <div class="counters d-flex justify-content-center" id="counters">
+            <!-- counter -->
+            <div class="counter">
+                <div class="counter__number" id="jsSeconds"></div>
+                <div class="counter__title">ثانية</div>
+            </div>
+            <!-- // counter -->
+            <!-- counter -->
+            <div class="counter">
+                <div class="counter__number" id="jsMinutes"></div>
+                <div class="counter__title">دقيقة</div>
+            </div>
+            <!-- // counter -->
+            <!-- counter -->
+            <div class="counter">
+                <div class="counter__number" id="jsHours"></div>
+                <div class="counter__title">ساعة</div>
+            </div>
+            <!-- // counter -->
+            <!-- counter -->
+            <div class="counter">
+                <div class="counter__number" id="jsDays"></div>
+                <div class="counter__title">يوم</div>
+            </div>
+            <!-- // counter -->
+        </div>
+    </div>
+    <script>
+        // date
+        var countDownDate = new Date("Oct 10, 2021 24:00:00").getTime();
+
+        // update count every 1 second
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // ouput
+            document.getElementById("jsDays").innerHTML = days;
+            document.getElementById("jsHours").innerHTML = hours;
+            document.getElementById("jsMinutes").innerHTML = minutes;
+            document.getElementById("jsSeconds").innerHTML = seconds;
+
+            // when counter over
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("counters").className = "d-none";
+                document.getElementById("counterEnd").innerHTML = "نأسف ، لقد تم إنتهاء العروض";
+            }
+        }, 1000);
+    </script>
+    <!-- // offers end -->
+
     <!-- header -->
     <header class="header" data-aos="fade-up">
         <div class="container">
