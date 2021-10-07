@@ -134,7 +134,7 @@
     </div>
     <script>
         // date
-        var countDownDate = new Date("Oct 10, 2021 24:00:00").getTime();
+        var countDownDate = new Date("2021/10/10 23:59:59").getTime();
 
         // update count every 1 second
         var x = setInterval(function () {
