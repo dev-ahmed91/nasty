@@ -16,20 +16,20 @@ class UserSeeder extends Seeder
 
         User::create([
             'name' => 'Islam Gad',
-            'email' => 'tech@jumppeak.net',
+            'email' => 'islam@nastyvs.com',
             'password' =>'password',
             'role' => Roles::ADMIN,
             'email_verified_at' => now()
         ]);
 
         User::create([
-            'name' => 'Rowaida Muhammad',
-            'email' => 'rowaida.muhammad@jumppeak.net',
-            'password' =>'rowaida@jumppeak',
+            'name' => 'Marwan',
+            'email' => 'marwan@nastyvs.com',
+            'password' =>'admin102030',
             'role' => Roles::ADMIN,
             'email_verified_at' => now()
         ]);
-        
+
 
         //factory(User::class, 100)->create();
     }

@@ -13,11 +13,6 @@ class AddBodyScriptsToSettingsTable extends Migration
      */
     public function up()
     {
-        \Modules\Setting\Models\Setting::create([
-            'name' => 'Body Scripts',
-            'key' => 'pages.body.scripts',
-            'value' => '<script></script>',
-        ]);
     }
 
     /**

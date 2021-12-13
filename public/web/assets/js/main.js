@@ -102,7 +102,7 @@ var servicesSlider = new Swiper('.servicesSlider', {
 });
 
 
-var doctorsSlider = new Swiper('.doctorsSlider', {
+var productsSlider = new Swiper('.productsSlider', {
     spaceBetween: 16,
     loop: false,
     autoplay: {
@@ -110,13 +110,13 @@ var doctorsSlider = new Swiper('.doctorsSlider', {
         disableOnInteraction: true,
     },
     scrollbar: {
-        el: '.doctors-scrollbar',
+        el: '.products-scrollbar',
         hide: false,
         dragSize: 60,
     },
     navigation: {
-        nextEl: '.doctors-next',
-        prevEl: '.doctors-prev',
+        nextEl: '.products-next',
+        prevEl: '.products-prev',
     },
     breakpoints: {
         0: {

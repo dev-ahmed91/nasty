@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Modules\Doctor\Seeds\DoctorSeeder;
-use Modules\Lead\Seeds\LeadSeeder;
+use Modules\Product\Seeds\ProductSeeder;
+use Modules\Category\Seeds\CategorySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(SettingSeeder::class);
         $this->call(CountrySeeder::class);
-        $this->call(DoctorSeeder::class);
-        $this->call(LeadSeeder::class);
+        $this->call(ProductSeeder::class);
+        $this->call(CategorySeeder::class);
     }
 }

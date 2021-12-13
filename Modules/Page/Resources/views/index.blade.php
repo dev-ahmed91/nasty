@@ -479,7 +479,7 @@
                 <h2 data-aos="fade-down">
                     <span class="color">خدماتنا </span>لأمان عينيك
                 </h2>
-                <p class="lead" data-aos="fade-up" data-aos-delay="200">
+                <p class="category" data-aos="fade-up" data-aos-delay="200">
                     {{ settings()->get('services.description') }}
                 </p>
             </div>
@@ -652,8 +652,8 @@
     <!-- // services -->
 
 
-    <!-- doctors -->
-    <div class="doctors d-pad-b">
+    <!-- products -->
+    <div class="products d-pad-b">
         <div class="container">
             <!-- title -->
             <div class="title text-center">
@@ -662,56 +662,56 @@
                 </h2>
             </div>
             <!-- // title -->
-            <!-- doctors -->
-            <div class="doctors__slider">
-                <div class="swiper-container doctorsSlider">
+            <!-- products -->
+            <div class="products__slider">
+                <div class="swiper-container productsSlider">
                     <div class="swiper-wrapper">
 
-                          @foreach($doctors as $doctor)
-                              <!-- doctor -->
+                          @foreach($products as $product)
+                              <!-- product -->
                                   <div class="swiper-slide">
-                                      <div class="doctor text-center">
+                                      <div class="product text-center">
                                           <!-- image -->
-                                          <div class="doctor__image">
+                                          <div class="product__image">
                                               <picture>
-                                                  <source srcset="{{ $doctor->image }}" type="image/webp"><img src="{{ $doctor->image }}"
-                                                                                                                        draggable="false" loading="lazy" alt="{{ $doctor->name }}">
+                                                  <source srcset="{{ $product->image }}" type="image/webp"><img src="{{ $product->image }}"
+                                                                                                                        draggable="false" loading="lazy" alt="{{ $product->name }}">
                                               </picture>
                                           </div>
                                           <!-- // image -->
                                           <!-- info -->
-                                          <div class="doctor__info">
-                                              <h3 class="h5 doctor__name" data-aos="fade-down">
-                                                  {{ $doctor->name }}  </h3>
-                                              <span class="color doctor__branch d-block" data-aos="fade-up" data-aos-delay="200">
-                                        {{ $doctor->branch }}
+                                          <div class="product__info">
+                                              <h3 class="h5 product__name" data-aos="fade-down">
+                                                  {{ $product->name }}  </h3>
+                                              <span class="color product__branch d-block" data-aos="fade-up" data-aos-delay="200">
+                                        {{ $product->branch }}
                                     </span>
-                                              <p class="doctor__spec" data-aos="fade-up" data-aos-delay="400">
-                                                  {{ $doctor->description }}                                              </p>
+                                              <p class="product__spec" data-aos="fade-up" data-aos-delay="400">
+                                                  {{ $product->description }}                                              </p>
                                           </div>
                                           <!-- // info -->
                                           <!-- book -->
-                                          <div class="doctor__book" data-aos="zoom-in" data-aos-delay="600">
+                                          <div class="product__book" data-aos="zoom-in" data-aos-delay="600">
                                               <a href="#book" class="btn btn-secondary">إحجز الآن</a>
                                           </div>
                                           <!-- // book -->
                                       </div>
                                   </div>
-                                  <!-- // doctor -->
+                                  <!-- // product -->
                         @endforeach
                     </div>
                     <!-- controls -->
-                    <div class="swiper-button-next doctors-next"></div>
-                    <div class="swiper-button-prev doctors-prev"></div>
+                    <div class="swiper-button-next products-next"></div>
+                    <div class="swiper-button-prev products-prev"></div>
                     <!-- // controls -->
                 </div>
-                <div class="swiper-scrollbar doctors-scrollbar"></div>
+                <div class="swiper-scrollbar products-scrollbar"></div>
 
             </div>
-            <!-- // doctors -->
+            <!-- // products -->
         </div>
     </div>
-    <!-- // doctors -->
+    <!-- // products -->
 
     <!-- testimonials -->
     <div class="testimonials d-pad-b">
@@ -730,7 +730,7 @@
                             <!-- slide -->
                             <div class="swiper-slide">
                                 <div class="testimonials__slide text-center">
-                                    <p class="lead">
+                                    <p class="category">
                                         تم عمل عملية و تكللت بالنجاح علی يد الدكتور عادل الرشود وهو من أمهر الأطباء في سحب الموية البيضاء ورزع
                                         عدسة
                                         ثلاثية ،،
@@ -753,7 +753,7 @@
                             <!-- slide -->
                             <div class="swiper-slide">
                                 <div class="testimonials__slide text-center">
-                                    <p class="lead">
+                                    <p class="category">
                                         أشهر مركز طبي متخصص في طب العيون وله خدمات طبية عديدة ، عنده طاقم وفريق طبي متميز في جميع التخصصات ، راجعت
                                         في
                                         قسم العيون وكذلك الجيوب الأنفية ، وكانوا جدا متميزين وناصحين لي ، والخدمة والاستقبال جدا متميز ، وفقهم
@@ -801,7 +801,7 @@
                             </h2>
                             <!-- zoho -->
                             <div id='crmWebToEntityForm' class='zcwf_lblTopBottom crmWebToEntityForm'>
-                                <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4751497000005958001 method='POST'
+                                <form action='https://crm.zoho.com/crm/WebToCategoryForm' name=WebToCategories4751497000005958001 method='POST'
                                       onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4751497000005958001()' accept-charset='UTF-8'>
                                     <input type='text' style='display:none;' name='xnQsjsdp'
                                            value='c720c5569cda887877359d372931a38fb36ebee579e51daa2f0dfadb3d5d4062'>
@@ -858,7 +858,7 @@
                                             $('#LastName').val($('#LEADCF2').val());
                                             $.ajax({
                                             type: "POST",
-                                                url: route('api.leads.store'),
+                                                url: route('api.categories.store'),
                                                 data: {
                                                     "_token": "{{ csrf_token() }}",
                                                     "name": $('#Last_Name').val(),
@@ -885,7 +885,7 @@
                                                         'currency': 'SAR', 'price': 333.33,
                                                         'item_ids': ['097man', '16span']
                                                     });
-                                                    fbq('track', 'Leads', {currency: "SAR", value: 30.00});
+                                                    fbq('track', 'Categories', {currency: "SAR", value: 30.00});
 
                                                     function gtag_report_conversion(url) {
                                                         var callback = function () {
@@ -910,7 +910,7 @@
                                             var mndFileds = new Array('Last Name', 'Mobile');
                                             var fldLangVal = new Array('\u0627\u0644\u0623\u0633\u0645', '\u0631\u0642\u0645\x20\u0627\u0644\u062C\u0648\u0627\u0644');
                                             for (i = 0; i < mndFileds.length; i++) {
-                                                var fieldObj = document.forms['WebToLeads4751497000005958001'][mndFileds[i]];
+                                                var fieldObj = document.forms['WebToCategories4751497000005958001'][mndFileds[i]];
                                                 if (fieldObj) {
                                                     if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
                                                         if (fieldObj.type == 'file') {
@@ -979,16 +979,16 @@
                                         function trackVisitor() {
                                             try {
                                                 if ($zoho) {
-                                                    var LDTuvidObj = document.forms['WebToLeads4751497000005958001']['LDTuvid'];
+                                                    var LDTuvidObj = document.forms['WebToCategories4751497000005958001']['LDTuvid'];
                                                     if (LDTuvidObj) {
                                                         LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();
                                                     }
-                                                    var firstnameObj = document.forms['WebToLeads4751497000005958001']['First Name'];
+                                                    var firstnameObj = document.forms['WebToCategories4751497000005958001']['First Name'];
                                                     if (firstnameObj) {
                                                         name = firstnameObj.value + ' ' + name;
                                                     }
                                                     $zoho.salesiq.visitor.name(name);
-                                                    var emailObj = document.forms['WebToLeads4751497000005958001']['Email'];
+                                                    var emailObj = document.forms['WebToCategories4751497000005958001']['Email'];
                                                     if (emailObj) {
                                                         email = emailObj.value;
                                                         $zoho.salesiq.visitor.email(email);

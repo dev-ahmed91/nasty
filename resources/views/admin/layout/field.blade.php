@@ -48,12 +48,13 @@
 @if(in_array($type, ['select']))
     <div class="form-group col-md-{{$cols}}">
         @php ($default = $form ? old($name, $form->$name) : old($name) )
+        <label for="{{ $name }}" class="form-check-label @error($name) text-danger @enderror">{{ $label  }}</label>
         <select id="{{$name}}"  @if($required) required @endif class="form-control @error($name) text-danger @enderror" name="{{ $name }}">
             <option {{ $default == '' ? 'selected' : '' }}  value="">{{ $label }} @error($name) ({{ $message }}) @enderror</option>
             @foreach($options as $key => $option)
                 <option {{ $default == $key ? 'selected' : '' }} value="{{ $key }}">{{ $option }}</option>
             @endforeach
-        </select>s
+        </select>
     </div>
 @endif
 

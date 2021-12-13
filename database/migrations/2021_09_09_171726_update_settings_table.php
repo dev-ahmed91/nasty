@@ -14,9 +14,6 @@ class UpdateSettingsTable extends Migration
     public function up()
     {
 
-        Schema::table('settings', function (Blueprint $table) {
-            $table->text('value')->change()->nullable();
-        });
     }
 
     /**

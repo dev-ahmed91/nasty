@@ -8,59 +8,32 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('admin.leads.index') }}" >
-                    <i class="las la-users"></i>
-                    <span class="nav-text">Leads</span>
+                <a href="{{ route('admin.products.index') }}" >
+                    <i class="las la-shopping-cart"></i>
+                    <span class="nav-text">Products</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('admin.doctors.index') }}" >
-                    <i class="las la-stethoscope"></i>
-                    <span class="nav-text">Doctors</span>
-                </a>
-            </li>
-        <!--
-            <li>
-                <a href="{{ route('admin.pages.index') }}" >
-                    <i class="la la-sticky-note"></i>
-                    <span class="nav-text">Pages</span>
-                </a>
-            </li>
-
-
-            <li>
-                <a href="{{ route('admin.transactions.index') }}" >
-                    <i class="la la-exchange-alt"></i>
-                    <span class="nav-text">Transactions</span>
+                <a href="{{ route('admin.orders.index') }}" >
+                    <i class="la la-money-bill"></i>
+                    <span class="nav-text">Orders</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('admin.reviews.index') }}" >
-                    <i class="la la-recycle"></i>
-                    <span class="nav-text">Points</span>
+                <a href="{{ route('admin.categories.index') }}" >
+                    <i class="las la-list-alt"></i>
+                    <span class="nav-text">Categories</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('admin.tickets.index') }}" >
-                    <i class="las la-envelope"></i>
-                    <span class="nav-text">Tickets</span>
+                <a href="{{ route('admin.users.index') }}" >
+                    <i class="la la-users"></i>
+                    <span class="nav-text">Admins</span>
                 </a>
             </li>
-
-
-            <li>
-                <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                    <i class="la la-stopwatch"></i>
-                    <span class="nav-text">Pending Actions</span>
-                </a>
-                <ul aria-expanded="false">
-                    <li><a href="{{ route('admin.pending.users') }}">Registrations</a></li>
-                    <li><a href="{{ route('admin.pending.tickets') }}">Open Tickets</a></li>
-                </ul>
-            </li>-->
 
             <li>
                 <a href="{{ route('admin.settings.index') }}" >
@@ -68,20 +41,11 @@
                     <span class="nav-text">Settings</span>
                 </a>
             </li>
-
-<!--            <li>
-                <a href="{{ route('admin.users.index') }}" >
-                    <i class="la la-users"></i>
-                    <span class="nav-text">Admins</span>
-                </a>
-            </li>-->
-
-
         </ul>
 
         <div class="copyright">
-            <p><strong>Jumppeak Admin Dashboard</strong> © 2020 All Rights Reserved</p>
-            <p>Made with <span class="heart"></span> by Jumppeak Team</p>
+            <p><strong>Nasty Vape Store</strong> © {{date('Y') }} All Rights Reserved</p>
+            <p>Made with <span class="heart"></span> by Nasty Team</p>
         </div>
     </div>
 </div>

@@ -143,7 +143,7 @@ export default {
                     page: page,
                     q : this.q,
                     status : this.status.id,
-                    role: this.role,
+                    role: this.role.id,
                     sort : this.sort.id,
                     direction : this.sort.direction,
                 }))

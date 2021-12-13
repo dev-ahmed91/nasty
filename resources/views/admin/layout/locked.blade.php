@@ -18,7 +18,7 @@
                 <div class="row justify-content-center align-items-center" style="height: 20%; margin-top: 100px">
                     <div class="col-md-6">
                         <div class="text-center mb-3">
-                            <a href="{{ route('admin.dashboard.index') }}"><img width="100%" src="/assets/images/logo-full.png" alt=""></a>
+                            <a href="{{ route('admin.dashboard.index') }}"><img width="50%" src="/assets/images/logo3.png" alt=""></a>
                         </div>
                     </div>
                 </div>

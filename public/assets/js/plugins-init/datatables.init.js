@@ -10,7 +10,7 @@ let dataSet = [
     [ "Colleen Hurst", "Javascript Developer", "San Francisco", "2360", "2009/09/15", "$205,500" ],
     [ "Sonya Frost", "Software Engineer", "Edinburgh", "1667", "2008/12/13", "$103,600" ],
     [ "Jena Gaines", "Office Manager", "London", "3814", "2008/12/19", "$90,560" ],
-    [ "Quinn Flynn", "Support Lead", "Edinburgh", "9497", "2013/03/03", "$342,000" ],
+    [ "Quinn Flynn", "Support Category", "Edinburgh", "9497", "2013/03/03", "$342,000" ],
     [ "Charde Marshall", "Regional Director", "San Francisco", "6741", "2008/10/16", "$470,600" ],
     [ "Haley Kennedy", "Senior Marketing Designer", "London", "3597", "2012/12/18", "$313,500" ],
     [ "Tatyana Fitzpatrick", "Regional Director", "London", "1965", "2010/03/17", "$385,750" ],
@@ -18,8 +18,8 @@ let dataSet = [
     [ "Paul Byrd", "Chief Financial Officer (CFO)", "New York", "3059", "2010/06/09", "$725,000" ],
     [ "Gloria Little", "Systems Administrator", "New York", "1721", "2009/04/10", "$237,500" ],
     [ "Bradley Greer", "Software Engineer", "London", "2558", "2012/10/13", "$132,000" ],
-    [ "Dai Rios", "Personnel Lead", "Edinburgh", "2290", "2012/09/26", "$217,500" ],
-    [ "Jenette Caldwell", "Development Lead", "New York", "1937", "2011/09/03", "$345,000" ],
+    [ "Dai Rios", "Personnel Category", "Edinburgh", "2290", "2012/09/26", "$217,500" ],
+    [ "Jenette Caldwell", "Development Category", "New York", "1937", "2011/09/03", "$345,000" ],
     [ "Yuri Berry", "Chief Marketing Officer (CMO)", "New York", "6154", "2009/06/25", "$675,000" ],
     [ "Caesar Vance", "Pre-Sales Support", "New York", "8330", "2011/12/12", "$106,450" ],
     [ "Doris Wilder", "Sales Assistant", "Sidney", "3023", "2010/09/20", "$85,600" ],
@@ -32,7 +32,7 @@ let dataSet = [
     [ "Michelle House", "Integration Specialist", "Sidney", "2769", "2011/06/02", "$95,400" ],
     [ "Suki Burks", "Developer", "London", "6832", "2009/10/22", "$114,500" ],
     [ "Prescott Bartlett", "Technical Author", "London", "3606", "2011/05/07", "$145,000" ],
-    [ "Gavin Cortez", "Team Leader", "San Francisco", "2860", "2008/10/26", "$235,500" ],
+    [ "Gavin Cortez", "Team Categoryer", "San Francisco", "2860", "2008/10/26", "$235,500" ],
     [ "Martena Mccray", "Post-Sales support", "Edinburgh", "8240", "2011/03/09", "$324,050" ],
     [ "Unity Butler", "Marketing Designer", "San Francisco", "5384", "2009/12/09", "$85,675" ]
 ];
@@ -46,9 +46,9 @@ let dataSet = [
     var table = $('#example').DataTable({
         createdRow: function ( row, data, index ) {
            $(row).addClass('selected')
-        } 
+        }
     });
-      
+
     table.on('click', 'tbody tr', function() {
     var $row = table.row(this).nodes().to$();
     var hasClass = $row.hasClass('selected');
@@ -58,7 +58,7 @@ let dataSet = [
         $row.addClass('selected')
     }
     })
-    
+
     table.rows().every(function() {
     this.nodes().to$().removeClass('selected')
     });
@@ -85,15 +85,15 @@ let dataSet = [
             $row.addClass('selected')
         }
     })
-        
+
     table2.rows().every(function() {
         this.nodes().to$().removeClass('selected')
     });
-	
-	// 
+
+	//
 	var table = $('#example3, #example4, #example5').DataTable();
 	$('#example tbody').on('click', 'tr', function () {
 		var data = table.row( this ).data();
 	});
-   
+
 })(jQuery);

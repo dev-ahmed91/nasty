@@ -14,9 +14,9 @@ class AddFooterImageToSettingsTable extends Migration
     public function up()
     {
         \Modules\Setting\Models\Setting::create([
-            'name' => 'Form Image',
-            'key' => 'form.image',
-            'value' => '/web/assets/images/main.jpg',
+            'name' => 'Website Title',
+            'key' => 'common.title',
+            'value' => 'Nasty Vape Store',
         ]);
     }
 

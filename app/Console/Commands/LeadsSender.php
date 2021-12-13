@@ -4,25 +4,25 @@ namespace App\Console\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
-use Modules\Lead\Constants\LeadStatus;
-use Modules\Lead\Models\Lead;
+use Modules\Category\Constants\CategoryStatus;
+use Modules\Category\Models\Category;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-class LeadsSender extends Command
+class CategoriesSender extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'leads:send';
+    protected $signature = 'categories:send';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Send all Pending leads then mark them as sent.';
+    protected $description = 'Send all Pending categories then mark them as sent.';
 
     /**
      * Create a new command instance.
@@ -42,25 +42,25 @@ class LeadsSender extends Command
     {
         $out = new ConsoleOutput();
 
-        $leads = Lead::query()->where('sent', LeadStatus::PENDING)->limit(10)->get();
-        if (!$leads->count()) {
-            $out->writeln("All pending leads are sent.");
+        $categories = Category::query()->where('sent', CategoryStatus::DISABLED)->limit(10)->get();
+        if (!$categories->count()) {
+            $out->writeln("All pending categories are sent.");
         }
 
-        /** @var Lead $lead */
-        foreach ($leads as $lead){
-            $out->writeln('Found a Pending Lead #'.$lead->id);
+        /** @var Category $lead */
+        foreach ($categories as $lead){
+            $out->writeln('Found a Pending Category #'.$lead->id);
 
 
             try {
                 $lead->send();
-                $lead->sent = LeadStatus::SENT;
-                $out->writeln('Sent Lead #'.$lead->id);
+                $lead->sent = CategoryStatus::ACTIVE;
+                $out->writeln('Sent Category #'.$lead->id);
 
 
             } catch (Exception $exception) {
-                $lead->sent = LeadStatus::ERROR;
-                $out->writeln('Error while Sending Lead #'.$lead->id);
+                $lead->sent = CategoryStatus::ERROR;
+                $out->writeln('Error while Sending Category #'.$lead->id);
             }
 
             $lead->save();

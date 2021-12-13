@@ -1,7 +1,7 @@
 @extends('admin.layout.base')
 
 @section('title')
-    Users
+    Admins
 @endsection
 
 @section('content')

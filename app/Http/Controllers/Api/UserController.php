@@ -20,7 +20,6 @@ class UserController extends Controller
 
                 return $query->where("users.active", (integer) request()->get('status'));
             })->when(($request->get('role')), function (Builder $query) {
-
                 return $query->where("users.role", (integer) request()->get('role'));
             })
             ->orderBy(request()->get('sort', 'created_at'), request()->get('direction', 'DESC'))

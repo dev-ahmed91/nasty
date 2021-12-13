@@ -4,7 +4,7 @@
 
 use Faker\Generator as Faker;
 use Illuminate\Database\Eloquent\Factory;
-use Modules\Doctor\Models\Doctor;
+use Modules\Product\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,7 @@ use Modules\Doctor\Models\Doctor;
 |
 */
 
-$factory->define(Doctor::class, function (Faker $faker) {
+$factory->define(Product::class, function (Faker $faker) {
     return [
         'name' => $faker->sentence(2),
         'branch' => $faker->sentence(4),

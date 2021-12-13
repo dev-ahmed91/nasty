@@ -13,7 +13,7 @@ class AddStatusUsersTable extends Migration
      */
     public function up()
     {
-        Schema::table('doctors', function ($table) {
+        Schema::table('products', function ($table) {
             $table->tinyInteger('status')->default(\App\Constants\Statuses::ACTIVE);
         });
     }

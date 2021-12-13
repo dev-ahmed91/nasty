@@ -40,8 +40,8 @@ if (! function_exists('registeredModules')) {
             'Country',
             'Setting',
             'Page',
-            'Doctor',
-            'Lead',
+            'Product',
+            'Category',
         ];
     }
 }

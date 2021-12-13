@@ -4,7 +4,7 @@ namespace Modules\Page\Controllers\Web;
 
 use App\Constants\Statuses;
 use App\Http\Controllers\Controller;
-use Modules\Doctor\Models\Doctor;
+use Modules\Product\Models\Product;
 
 class PageController extends Controller
 {
@@ -12,9 +12,9 @@ class PageController extends Controller
 
     public function index()
     {
-        $doctors = Doctor::query()->where('status', Statuses::ACTIVE)->get();
+        $products = Product::query()->where('status', Statuses::ACTIVE)->get();
 
-        return view($this->viewsPath.'index', compact('doctors'));
+        return view($this->viewsPath.'index', compact('products'));
     }
 }
 
