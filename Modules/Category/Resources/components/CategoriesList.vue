@@ -88,7 +88,7 @@ export default {
     data: function () {
         return {
             'q' : '',
-            'sort': { 'id' : 'created_at', 'direction': 'DESC', 'label' : 'Sort', 'class' : ''},
+            'sort': { 'id' : 'id', 'direction': 'DESC', 'label' : 'Sort', 'class' : ''},
             'categories' : {},
             'page' : 1,
             'sorts' : []
