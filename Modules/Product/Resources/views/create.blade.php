@@ -17,6 +17,7 @@
 
                                 <div class="form-row " style="margin-bottom:  10px">
                                     @include('admin.layout.field', field('text', 'name', 'Name', 12))
+                                    @include('admin.layout.field', field('text', 'price', 'Price', 12))
                                     @include('admin.layout.field', field('select', 'category_id', 'Category', 12, [], $categories))
                                     @include('admin.layout.field', field('text', 'description', 'Description', 12))
                                     @include('admin.layout.field', field('file', 'image', 'Image', 12))

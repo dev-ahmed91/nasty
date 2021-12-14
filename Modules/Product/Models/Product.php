@@ -18,7 +18,7 @@ class Product extends Eloquent
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'image', 'category_id'
+        'name', 'price', 'description', 'image', 'category_id'
     ];
 
     protected $appends = [
