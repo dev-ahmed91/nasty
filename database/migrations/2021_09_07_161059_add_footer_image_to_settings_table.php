@@ -14,11 +14,11 @@ class AddFooterImageToSettingsTable extends Migration
      */
     public function up()
     {
-        Setting::create([
+        /*Setting::create([
             'name' => 'Website Title',
             'key' => 'common.title',
             'value' => 'Nasty Vape Store',
-        ]);
+        ]);*/
     }
 
     /**
