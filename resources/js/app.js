@@ -37,10 +37,10 @@ axios.interceptors.response.use(response => {
 Vue.use(exports);
 
 Vue.component('users-list', require('./components/UsersList.vue').default);
-Vue.component('settings-list', require('../../modules/Setting/Resources/components/SettingsList.vue').default);
-Vue.component('products-list', require('../../modules/Product/Resources/components/ProductsList.vue').default);
-Vue.component('categories-list', require('../../modules/Category/Resources/components/CategoriesList.vue').default);
-Vue.component('countries-list', require('../../modules/Country/Resources/components/CountriesList.vue').default);
+Vue.component('settings-list', require('../../Modules/Setting/Resources/components/SettingsList.vue').default);
+Vue.component('products-list', require('../../Modules/Product/Resources/components/ProductsList.vue').default);
+Vue.component('categories-list', require('../../Modules/Category/Resources/components/CategoriesList.vue').default);
+Vue.component('countries-list', require('../../Modules/Country/Resources/components/CountriesList.vue').default);
 Vue.component('pagination', require('laravel-vue-pagination'));
 
 
