@@ -692,7 +692,7 @@
                 ***********************************-->
             <div class="footer">
                 <div class="copyright">
-                    <p>Copyright © Designed &amp; Developed by Jumppeak {{ date('Y') }}</p>
+                    <p>Copyright © Designed &amp; Developed by Nasty Vape Store {{ date('Y') }}</p>
                 </div>
             </div>
             <!--**********************************

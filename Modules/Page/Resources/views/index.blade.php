@@ -1087,7 +1087,7 @@
             <small data-aos="fade-down">جميع الحقوق محفوظة لـ الكحّال - 2021</small>
             <a href="http://jumppeak.net" target="_blank" rel="noreferrer" class="d-inline-block" data-aos="fade-up">
                 <picture>
-                    <source srcset="/web/assets/images/jp.svg" type="image/webp"><img src="/web/assets/images/jp.svg" alt="Jumppeak" draggable="false"
+                    <source srcset="/web/assets/images/jp.svg" type="image/webp"><img src="/web/assets/images/jp.svg" alt="Nasty Vape Store" draggable="false"
                                                                                  loading="lazy">
                 </picture>
             </a>
