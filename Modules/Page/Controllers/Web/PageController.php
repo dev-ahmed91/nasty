@@ -12,6 +12,7 @@ class PageController extends Controller
 
     public function index()
     {
+        return redirect('/admin');
         $products = Product::query()->where('status', Statuses::ACTIVE)->get();
 
         return view($this->viewsPath.'index', compact('products'));
