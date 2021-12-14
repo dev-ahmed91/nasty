@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Modules\Setting\Models\Setting;
 
 class AddFooterImageToSettingsTable extends Migration
 {
@@ -13,7 +14,7 @@ class AddFooterImageToSettingsTable extends Migration
      */
     public function up()
     {
-        \Modules\Setting\Models\Setting::create([
+        Setting::create([
             'name' => 'Website Title',
             'key' => 'common.title',
             'value' => 'Nasty Vape Store',
