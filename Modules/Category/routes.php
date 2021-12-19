@@ -10,9 +10,5 @@ Route::prefix('/api')->middleware('auth:web')->attribute('namespace', $namespace
 
 
 Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', $namespace.'Admin')->as('admin.')->group( function () {
-    Route::resource('categories', 'CategoryController')->only('index', 'edit', 'update');
-});
-
-Route::prefix('/api')->attribute('namespace', $namespace.'Api')->group( function () {
-    Route::post('/add-categories', 'CategoryController@store')->name('api.categories.store');
+    Route::resource('categories', 'CategoryController')->only('index', 'edit', 'update', 'create', 'store');
 });

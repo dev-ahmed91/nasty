@@ -20,7 +20,10 @@
                                             @include('admin.layout.field', field('select', 'parent_id', 'Parent', 12, $form, $categories))
                                             @include('admin.layout.field', field('text', 'name', 'Name', 12, $form))
                                             @include('admin.layout.field', field('file', 'image', 'Image', 12, $form))
+
                                         </div>
+                                        @include('admin.layout.field', field('toggle', 'status', 'Active', 1, $form))
+
                                     </div>
                                     <div class="col-md-2">
                                         @if($form->image)

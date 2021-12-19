@@ -16,7 +16,7 @@ class Category extends Eloquent
      * @var array
      */
     protected $fillable = [
-        'name', 'image', 'parent_id', 'price'
+        'name', 'image', 'parent_id', 'price', 'status'
     ];
 
     protected $with = ['parent'];

@@ -19,6 +19,21 @@
                     </div>
                 </div>
 
+                <div class="col-md-2 col-sm-6 mb-1">
+                    <div class="input-group search-area d-xl-inline-flex ">
+                        <div class="dropdown " style="width: 100%">
+                            <a href="javascript:void(0)"  class="btn btn-rounded btn-primary" style="width: 100%" data-toggle="dropdown" aria-expanded="false">
+                                <i class="las la-bolt scale5"></i>
+                                {{ currentCategoryName }}
+                                <i class="las la-angle-down "></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-center">
+                                <a v-for="(category, id) in JSON.parse(categories)" v-on:click="changeCategory(category, id)" class="dropdown-item text-primary" href="javascript:void(0);"><span >{{ category }}</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-2 col-sm-6 mb-1 ml-auto">
                     <div class="input-group search-area d-xl-inline-flex">
                         <div class="dropdown " style="width: 100%">
@@ -96,11 +111,14 @@
 <script>
 export default {
     name: 'products-list',
+    props: ['categories'],
     data: function () {
         return {
             'q' : '',
-            'sort': { 'id' : 'id', 'direction': 'DESC', 'label' : 'Sort', 'class' : ''},
+            'sort': { 'id' : 'products.id', 'direction': 'DESC', 'label' : 'Sort', 'class' : ''},
             'products' : {},
+            'currentCategory' : '',
+            'currentCategoryName': 'Categories',
             'page' : 1,
             'sorts' : []
         }
@@ -108,8 +126,6 @@ export default {
     created() {
         this.fetchProducts();
         this.fetchSorts();
-    },
-    computed: {
     },
     methods: {
         fetchProducts(page = 1) {
@@ -120,6 +136,7 @@ export default {
                     q : this.q,
                     sort : this.sort.id,
                     direction : this.sort.direction,
+                    category: this.currentCategory
                 }))
                 .then(response => {
                     this.products = response.data;
@@ -127,12 +144,17 @@ export default {
             },
             fetchSorts() {
                 this.sorts = {
-                    1: { 'id' : 'created_at', 'direction': 'DESC', 'label' : 'Created DESC', 'class' : 'dark'},
-                    2: { 'id' : 'created_at', 'direction': 'ASC', 'label' : 'Created ASC', 'class' : 'dark'},
+                    1: { 'id' : 'products.id', 'direction': 'DESC', 'label' : 'Created DESC', 'class' : 'dark'},
+                    2: { 'id' : 'products.id', 'direction': 'ASC', 'label' : 'Created ASC', 'class' : 'dark'},
                 };
             },
             changeSort(sort) {
                 this.sort = (sort !== undefined) ? this.sort = sort : '';
+                this.fetchProducts();
+            },
+            changeCategory(categoryName, id) {
+                this.currentCategory = (id !== undefined) ? this.currentCategory = id : '';
+                this.currentCategoryName = (categoryName !== undefined) ? this.currentCategoryName = categoryName : '';
                 this.fetchProducts();
             },
         }

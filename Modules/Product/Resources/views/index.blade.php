@@ -7,6 +7,6 @@
 @section('content')
     <div class="container-fluid">
         @include('admin.layout.alerts')
-        <products-list></products-list>
+        <products-list categories="{{ json_encode($categories) }}"></products-list>
     </div>
 @endsection

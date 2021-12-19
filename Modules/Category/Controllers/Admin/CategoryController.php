@@ -28,9 +28,35 @@ class CategoryController extends Controller
         return view($this->viewsPath.'index');
     }
 
+    public function create()
+    {
+        $categories = Category::whereNull('parent_id')->pluck('name', 'id');
+
+        return view($this->viewsPath.'create',['categories' => $categories]);
+    }
+
+    public function store(Request $request) {
+        $criteria = [
+            'name' => 'required',
+        ];
+
+        $request->validate($criteria);
+
+        $category = new Category();
+        $category->fill($request->request->all());
+
+        if ($request->hasFile('image') ) {
+            $category->image = $this->uploaderService->upload($request->file("image"), "categories");
+        }
+
+        $category->save();
+
+        return redirect()->route('admin.categories.index')->with(['success' => 'Created Successfully']);
+    }
+
     public function edit(Category $category)
     {
-        $categories = Category::pluck('name', 'id');
+        $categories = Category::whereNull('parent_id')->pluck('name', 'id');
 
         return view($this->viewsPath.'edit',['form' => $category, 'categories' => $categories]);
     }
@@ -42,11 +68,17 @@ class CategoryController extends Controller
 
         $request->validate($criteria);
 
+        if (!$request->has('status')) {
+            $request->request->set('status', CategoryStatus::DISABLED);
+        }
+
         $category->fill($request->request->all());
 
         if ($request->hasFile('image') ) {
             $category->image = $this->uploaderService->upload($request->file("image"), "categories");
         }
+
+
 
         $category->save();
 

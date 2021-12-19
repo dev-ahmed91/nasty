@@ -26,8 +26,9 @@ class ProductController extends Controller
 
     public function index()
     {
-
-        return view($this->viewsPath.'index');
+        $categories = Category::whereNull('parent_id')->pluck('name', 'id');
+        ;
+        return view($this->viewsPath.'index', ['categories' => $categories]);
     }
 
 

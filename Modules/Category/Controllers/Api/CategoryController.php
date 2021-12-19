@@ -22,19 +22,4 @@ class CategoryController extends Controller
 
         return response()->json($users);
     }
-
-    public function store(Request $request)
-    {
-        $category = new Category();
-
-        $category->fill([
-            'branch' => $request->get('branch'),
-            'name' => $request->get('name'),
-            'phone' => $request->get('phone')
-        ]);
-
-        $category->save();
-
-        return response()->json($category);
-    }
 }
