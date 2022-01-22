@@ -1,5 +1,8 @@
 <?php
 
+use Modules\Product\Services\CartService;
+use Modules\Setting\Services\SettingService;
+
 if (! function_exists('paginate')) {
     function paginate($collection) {
         return [
@@ -37,6 +40,7 @@ if (! function_exists('field')) {
 if (! function_exists('registeredModules')) {
     function registeredModules() {
         return [
+            'Home',
             'Country',
             'Setting',
             'Page',
@@ -49,6 +53,13 @@ if (! function_exists('registeredModules')) {
 if (! function_exists('settings')) {
     function settings()
     {
-        return new \Modules\Setting\Services\SettingService();
+        return new SettingService();
+    }
+}
+
+if (! function_exists('cart')) {
+    function cart()
+    {
+        return new CartService();
     }
 }

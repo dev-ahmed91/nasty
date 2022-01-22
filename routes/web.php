@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['middleware' => ['auth:web']], function () {
-
-});
 
 Route::prefix('/admin')->middleware('auth:web')->attribute('namespace', 'Admin')->as('admin.')->group( function () {
     Route::get('/', function () { return view('admin.dashboard.index'); })->name('dashboard.index');
