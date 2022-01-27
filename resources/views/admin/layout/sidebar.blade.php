@@ -36,6 +36,13 @@
             </li>
 
             <li>
+                <a href="{{ route('admin.branches.index') }}" >
+                    <i class="las la-map-marked"></i>
+                    <span class="nav-text">Branches</span>
+                </a>
+            </li>
+
+            <li>
                 <a href="{{ route('admin.settings.index') }}" >
                     <i class="la la-cog"></i>
                     <span class="nav-text">Settings</span>

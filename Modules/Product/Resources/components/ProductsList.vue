@@ -62,6 +62,7 @@
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Price</th>
+                                <th>Stock</th>
                                 <th>Category</th>
                                 <th>Status</th>
                                 <th></th>
@@ -70,9 +71,10 @@
                             <tbody>
                             <tr v-for="product in products.data">
                                 <td><strong>{{ product.id }}</strong></td>
-                                <td width="200px"><img width="100%" class=" img-thumbnail"  :src="product.image"></td>
-                                <td>{{ product.name }}</td>
+                                <td width="200px"><a :href="route('admin.products.show', {'product': product.id})"><img width="100%" class=" img-thumbnail"  :src="product.image"></a></td>
+                                <td><a :href="route('admin.products.show', {'product': product.id})">{{ product.name }}</a></td>
                                 <td>{{ product.price }} LE</td>
+                                <td>{{ parseInt(product.stock) }}</td>
                                 <td>{{ product.category ? product.category.name  : '' }}</td>
                                 <td>
                                     <span v-bind:class="{ 'badge-success' : (product.status === 2) , 'badge-light' : (product.status === 1) }" class="badge">{{ product.statusLabel }}</span>
@@ -85,6 +87,7 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" :href="route('admin.products.edit', {product: product.id, page: page})">Edit</a>
+                                            <a class="dropdown-item" :href="route('admin.products.stock.create', {product: product.id, page: page})">Add Stock <i class="la la-plus"></i></a>
                                             <a class="dropdown-item" :href="route('admin.products.enable', {product: product.id, page: page})">Enable</a>
                                             <a class="dropdown-item" :href="route('admin.products.disable', {product: product.id, page: page})">Disable</a>
                                         </div>

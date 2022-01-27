@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Modules\Category\Constants\CategoryStatus;
 use Modules\Category\Models\Category;
+use Modules\Product\Constants\OrderType;
 use Modules\Product\Models\Order;
 use Modules\Product\Models\Product;
 
@@ -78,6 +79,7 @@ class HomeController extends Controller
         $order->status = 1;
         $order->total = $cart['total'];
         $order->delivery_fees = 30;
+        $order->type = OrderType::ONLINE;
         $order->save();
 
         foreach ($cart['products'] as $id => $product) {

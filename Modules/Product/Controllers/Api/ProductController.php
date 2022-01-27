@@ -19,7 +19,7 @@ class ProductController extends Controller
 
                     $query->join('categories', 'categories.id', '=', 'products.category_id');
 
-                    return $query->whereRaw("(products.name like '%{$word}%') OR (categories.name like '%{$word}%')");
+                    return $query->whereRaw("(products.name like '%{$word}%') OR (products.id = '{$word}')  OR (categories.name like '%{$word}%')");
                 })
                 ->when($request->get('category'), function (Builder $query) {
                     $categories = Category::where('parent_id', request()->get('category'))->pluck('id')->toArray();
@@ -30,5 +30,10 @@ class ProductController extends Controller
                 ->paginate(10);
 
         return response()->json($users);
+    }
+
+    public function show(Product $product, Request $request)
+    {
+        return response()->json($product);
     }
 }

@@ -42,6 +42,7 @@ if (! function_exists('registeredModules')) {
         return [
             'Home',
             'Country',
+            'Branch',
             'Setting',
             'Page',
             'Product',
