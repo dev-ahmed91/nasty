@@ -64,6 +64,13 @@ class OrderController extends Controller
             ]);
 
             $order->total += $product->price * $quantity;
+
+            $product->stocks()->attach($request->get('branch_id'), [
+                'quantity' => -$quantity,
+            ]);
+
+            $product->save();
+            $product->refreshStock();
         }
 
         $order->save();
