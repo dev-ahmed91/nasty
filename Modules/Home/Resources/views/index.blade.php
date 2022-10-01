@@ -2,6 +2,11 @@
 
 @section('content')
 
+    @if(session()->has('message'))
+        <div class="alert alert-success">
+            {{ session()->get('message') }}
+        </div>
+    @endif
     <div class="d-flex px-3 mb-n3">
         <div class="align-self-center">
             <h4 class="mb-0">Categories</h4>

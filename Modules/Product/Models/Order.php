@@ -2,7 +2,8 @@
 
 namespace Modules\Product\Models;
 
-
+use App\Models\User;
+use App\Notification\Admin\NewOrder;
 use Eloquent;
 use Modules\Product\Constants\OrderType;
 
@@ -30,9 +31,18 @@ class Order extends Eloquent
         'typeLabel'
     ];
 
-
     public function getTypeLabelAttribute()
     {
         return OrderType::getLabel($this->type);
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($model) {
+            $admin = User::query()->where('email', '=','marwan@nastyvs.com')->first();
+            $admin->notify(new NewOrder($model));
+        });
     }
 }
