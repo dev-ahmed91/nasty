@@ -3,6 +3,8 @@
 namespace Modules\Home\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+use App\Notification\Admin\NewOrder;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Modules\Category\Constants\CategoryStatus;
@@ -18,7 +20,7 @@ class HomeController extends Controller
     public function index()
     {
         $categories = Category::whereNull('parent_id')->where('status', CategoryStatus::ACTIVE)->get();
-        $trendingProducts = Product::limit(5)->inRandomOrder()->get();
+        $trendingProducts = Product::where('status', 2)->limit(5)->inRandomOrder()->get();
         return view($this->viewsPath.'index', compact('categories', 'trendingProducts'));
     }
 
@@ -38,7 +40,8 @@ class HomeController extends Controller
         }
 
         if ($category) {
-            $products = Product::where('category_id', $category->id)
+            $products = Product::where('status', 2)
+                ->where('category_id', $category->id)
                 ->get();
         }
 
@@ -90,10 +93,9 @@ class HomeController extends Controller
             ]);
         }
 
-
         cart()->destroy();
 
-        return redirect()->back();
+        return redirect()->route('web.home.index')->with('message', "WE'VE RECEIVED YOUR ORDER! #ORDER Number: ".$order->id."");
     }
 }
 
