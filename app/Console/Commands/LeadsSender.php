@@ -8,7 +8,7 @@ use Modules\Category\Constants\CategoryStatus;
 use Modules\Category\Models\Category;
 use Symfony\Component\Console\Output\ConsoleOutput;
 
-class CategoriesSender extends Command
+class LeadsSender extends Command
 {
     /**
      * The name and signature of the console command.
