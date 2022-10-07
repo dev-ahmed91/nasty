@@ -46,7 +46,8 @@ class NewOrder extends Notification implements ShouldQueue
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->markdown('mails.admin.new-order', ['order' => $this->order]);
+            ->markdown('mails.admin.new-order', ['order' => $this->order])
+            ->subject('New Order');
     }
 
     /**
