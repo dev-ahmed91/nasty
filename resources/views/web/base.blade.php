@@ -384,7 +384,7 @@
         <script type="text/javascript" src="/web/scripts/bootstrap.min.js"></script>
         <script  type="text/javascript">
             var config = {
-                phone :" 201274023845",
+                phone :"00201274023845",
                 call :"Message Us",
                 position :"ww-right",
                 size : "ww-normal",
