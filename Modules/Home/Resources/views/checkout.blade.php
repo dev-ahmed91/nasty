@@ -66,14 +66,14 @@
                         <h4 class="font-18">{{ $cart['total'] }} LE</h4>
                     </div>
                 </div>
-{{--                <div class="d-flex mb-3">--}}
-{{--                    <div class="me-3">--}}
-{{--                        <h4 class="font-18">Shipping</h4>--}}
-{{--                    </div>--}}
-{{--                    <div class="ms-auto">--}}
-{{--                        <h4 class="font-18">30 LE</h4>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
+                <div class="d-flex mb-3">
+                    <div class="me-3">
+                        <h4 class="font-18">Shipping Fees</h4>
+                    </div>
+                    <div class="ms-auto">
+                        <h4 class="font-18">?</h4>
+                    </div>
+                </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-full btn-block bg-highlight btn-m text-uppercase font-800 rounded-sm">Place Order</button>
                 </div>
