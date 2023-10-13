@@ -42,9 +42,7 @@ class Order extends Eloquent
 
         static::created(function ($model) {
             $admin = User::query()->where('email', '=','Marwanmaro010oo@gmail.com')->first();
-            $admin2 = User::query()->where('email', '=','dev.ahmed91@gmail.com')->first();
             $admin->notify(new NewOrder($model));
-            $admin2->notify(new NewOrder($model));
         });
     }
 }

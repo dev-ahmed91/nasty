@@ -173,6 +173,10 @@
             </div>
             <!-- End of Page Content-->
 
+            <a class="fixedButton" href="https://wa.me/+201146658000" title="Message Us">
+                <div class="roundedFixedBtn"><i class="fab fa-whatsapp"></i></div>
+            </a>
+
             <div id="snackbar-1" class="snackbar-toast bg-green-dark color-white" data-bs-delay="1000" data-autohide="true"><i class="fa fa-check-circle me-3"></i>Added Produce to Cart</div>
 
             <!--Menu Offer-->
